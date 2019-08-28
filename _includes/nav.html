@@ -9,14 +9,14 @@
     </ul>
 </nav> -->
 
-<nav>
-    <ul>
-        <a href="/"><img id="logo" src="/assets/img/electorials-logo.jpeg"></a>
+<nav role="navigation">
+    <a href="/" id="logo"><img src="/assets/img/electorials-logo.jpeg"></a>
+    <ul class="menu">
         {% for item in site.data.navigation.mainnav %}
-        <li class="{{ item.class }}">
+        <li class="{{ item.class }}"aria-haspopup="true">
             <a href="{{ item.link }}">{{ item.name }}</a>
             {% if item.subitems[0] %}
-                <ul>
+                <ul class="dropdown" aria-label="submenu">
                 {% for subitem in item.subitems %}
                     <li>
                         <a href="{{ subitem.link }}">{{ subitem.name }}</a>

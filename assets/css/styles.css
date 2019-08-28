@@ -14,11 +14,26 @@ nav {
 
     background-color: white;
     border-bottom: 1px solid red;
+
+    font-family: 'Monteserrat', sans-serif;
+    text-align: center;
 }
 
-nav ul {
+#logo {
+    float: left;
+    margin-left: 2em;
+}
+
+#logo img {
+    max-height: var(--nav-height);
+    display: inline;
+}
+
+/*** Dropdown menu ***/
+nav ul.menu {
     list-style-type: none;
-    /* line-height: var(--nav-height); */
+    float: right;
+    margin-right: 2em;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -28,35 +43,52 @@ nav ul {
     align-items: center;
 }
 
-#logo {
-    max-height: var(--nav-height);
-    display: inline;
-}
-
 nav ul li {
-    /* line-height: var(--nav-height); */
-    /* font-family: 'Monteserrat', sans-serif;
-    text-align: center; */
+    padding: 1rem;
+    position: relative;
+    list-style: none;
 }
-/* ``.navlink` is `nav ul li a` */
-.navlink {
-    /* display: inline; */
+
+li:hover {
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #e2e2e2;
+}
+
+.dropdown li:hover {
+    background: #a2a2a2;
+}
+
+nav .menu .menu-item .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    background: #e2e2e2;
+}
+
+nav .menu .menu-item:hover > .dropdown,
+nav .menu .menu-item .dropdown:hover {
+    visibility: visible;
+    opacity: 1;
     display: block;
-    /* margin-top: 2em; */
+}
 
-    /* line-height: var(--nav-height); */
-    padding: 0em 2em;
-    text-decoration: none;
-    height: 100%;
+nav .menu .menu-item .dropdown li {
+    clear: both;
+    width: 100%;
+}
 
+nav ul.dropdown li.menu-item {
     font-family: 'Monteserrat', sans-serif;
     text-align: center;
 }
 
-.navlink:hover {
-    background-color: green;
-}
-
+/***** Main content rules *****/
 main {
     max-width: 38rem;
     padding: 4rem 2rem 2rem;
