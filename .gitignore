@@ -1,0 +1,14 @@
+# The .gitignore file is great for listing files and folders that we wish to not allow to be pushed onto the repository.
+# https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# Ignores the .DS_Store file
+.DS_Store
+
+# Ignores this folder when Jekyll builds the site locally
+.jekyll-cache/
+
+# Ignores the _site folder (where the rendered site is stored) when Jekyll builds the site locally. Not needed since GitHub builds the site from the source files.
+_site/
+# Comment the line above with # if a plugin we might use has issues with the _site folder being excluded in pushing.
+# https://stackoverflow.com/questions/31871433/why-put-the-site-directory-of-a-jekyll-site-in-gitignore/31871892#31871892
+# https://stackoverflow.com/questions/28249255/how-do-i-configure-github-to-use-non-supported-jekyll-site-plugins/28252200#28252200
