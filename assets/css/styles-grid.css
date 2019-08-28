@@ -1,0 +1,13 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+nav {
+    /* Needs to be sticky. */
+}
+
+main {
+    max-width: 38rem;
+    padding: 2rem;
+    margin: auto;
+}
