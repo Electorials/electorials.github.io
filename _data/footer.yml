@@ -1,0 +1,27 @@
+- name: Arduino Projects
+  link: /projects/arduino
+  class: arduino
+
+- name: Raspberry Pi Projects
+  link: /projects/raspberry-pi
+  class: raspberry-pi
+
+- name: General Electronic Projects
+  link: /projects/gen-elec
+  class: gen-elec
+
+- name: Product Reviews
+  link: /reviews/products
+  class: prod-review
+
+- name: Sponsors
+  link: /sponsors
+  class: sponsors
+
+- name: About Us
+  link: /about
+  class: about
+
+- name: Contact Us
+  link: /contact
+  class: contact
