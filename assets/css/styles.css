@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+/***** Globals *****/
+div {
+    margin: 2rem auto;
+}
+
 /***** Nav rules *****/
 nav {
     position: fixed;
@@ -13,7 +18,6 @@ nav {
     height: var(--nav-height);
 
     background-color: white;
-    border-bottom: 1px solid red;
 
     font-family: 'Monteserrat', sans-serif;
     text-align: center;
@@ -90,13 +94,15 @@ nav ul.dropdown li.menu-item {
 
 /***** Main content rules *****/
 main {
-    max-width: 38rem;
-    padding: 4rem 2rem 2rem;
+    /* max-width: 38rem; */
+    /* width: 100%; */
+    padding: /*var(--nav-height)*/ 1.75em 0rem 2rem;
     margin: auto;
+    /* margin-top: var(--nav-height); */
 }
 
-div {
-    margin: 2rem auto;
+main div {
+
 }
 
 /* #hero {
@@ -105,10 +111,39 @@ div {
 
 #hero {
     text-align: center;
+    /* max-height: 90em; */
+    width: 100%;
+    min-height: 35em;
+
+    background-image: url(/assets/img/banners/home-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+#hero #hero-text {
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.5em;
+    background: rgba(90, 95, 99, 0.625);
+    width: 100%;
+    padding: 1.25rem 1.25rem 3.75rem;
 }
 
 #hero h1, #hero h2 {
     text-transform: uppercase;
+    font-family: 'Patua One', serif;
+    color: rgb(177, 245, 155);
+}
+
+#hero h2 {
+    margin: 0 4em;
+}
+
+#hero p {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 1.5em;
+    color: rgb(255, 215, 191);
 }
 
 #quote {
@@ -116,5 +151,5 @@ div {
 }
 
 #introduction {
-    /* margin: 2rem auto; */
+    margin: auto 2rem;
 }
