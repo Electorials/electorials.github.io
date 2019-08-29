@@ -33,7 +33,7 @@
 
 # For nav.html in the _includes folder.
 mainnav:
-    - name: Our Projects
+    - name: Projects
       class: projects menu-item
       link: /projects
       subitems:
@@ -44,7 +44,7 @@ mainnav:
           - name: General Electronics
             link: /projects/general-electronics
 
-    - name: Our Reviews
+    - name: Reviews
       class: reviews menu-item
       link: /review
       subitems:
