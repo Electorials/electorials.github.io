@@ -25,7 +25,7 @@ nav {
 
 #logo {
     float: left;
-    margin-left: 2em;
+    margin: 0 1em;
 }
 
 #logo img {
@@ -38,6 +38,7 @@ nav ul.menu {
     list-style-type: none;
     float: right;
     margin-right: 2em;
+    height: var(--nav-height);
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -51,6 +52,7 @@ nav ul li {
     padding: 1rem;
     position: relative;
     list-style: none;
+    font-size: .875em;
 }
 
 li:hover {

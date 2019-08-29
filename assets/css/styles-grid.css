@@ -38,6 +38,7 @@ nav ul.menu {
     list-style-type: none;
     float: right;
     margin-right: 2em;
+    height: var(--nav-height);
 
     display: -webkit-box;
     display: -ms-flexbox;

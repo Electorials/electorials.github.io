@@ -1,54 +1,51 @@
-# - name: Logo
-#   link: /
-#   class: home
+- name: Home
+  link: /
+  class: home menu-item
+
+- name: Arduino Projects
+  link: /projects/arduino
+  class: arduino menu-item
+
+- name: Raspberry Pi Projects
+  link: /projects/raspberry-pi
+  class: raspberry-pi menu-item
+
+- name: General Electronic Projects
+  link: /projects/gen-elec
+  class: gen-elec menu-item
+
+- name: Product Reviews
+  link: /reviews/product
+  class: prod-review menu-item
+
+- name: Company Reviews
+  link: /company
+  class: company menu-item
+
+- name: Contact Us
+  link: /contact
+  class: contact menu-item
 
 
-# - name: Arduino Projects
-#   link: /projects/arduino
-#   class: arduino
-#
-# - name: Raspberry Pi Projects
-#   link: /projects/raspberry-pi
-#   class: raspberry-pi
-#
-# - name: General Electronic Projects
-#   link: /projects/gen-elec
-#   class: gen-elec
-#
-# - name: Product Reviews
-#   link: /reviews/products
-#   class: prod-review
-#
-# - name: $2 PBC Fabrication
-#   link: /pcb-fab
-#   class: pcb-fab
-#
-# - name: Contact Us
-#   link: /contact
-#   class: contact
-#
-#
-### Revert back to the above if new three-level
-# navigation solution does not work out well.
 
-# For nav.html in the _includes folder.
-mainnav:
-    - name: Projects
-      class: projects menu-item
-      link: /projects
-      subitems:
-          - name: Arduino
-            link: /projects/arduino
-          - name: Raspberry Pi
-            link: /projects/raspberry-pi
-          - name: General Electronics
-            link: /projects/general-electronics
-
-    - name: Reviews
-      class: reviews menu-item
-      link: /review
-      subitems:
-          - name: Product Reviews
-            link: /review/product
-          - name: Company Reviews
-            link: /review/company
+# For dropdown menu
+# mainnav:
+#     - name: Projects
+#       class: projects menu-item
+#       link: /projects
+#       subitems:
+#           - name: Arduino
+#             link: /projects/arduino
+#           - name: Raspberry Pi
+#             link: /projects/raspberry-pi
+#           - name: General Electronics
+#             link: /projects/general-electronics
+#
+#     - name: Reviews
+#       class: reviews menu-item
+#       link: /review
+#       subitems:
+#           - name: Product Reviews
+#             link: /review/product
+#           - name: Company Reviews
+#             link: /review/company

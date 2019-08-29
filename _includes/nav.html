@@ -1,15 +1,16 @@
-<!-- <nav>
-    <ul>
-        <a href="/"><img src="/assets/img/electorials-logo.jpeg"></a>
+<nav>
+    <a href="/" id="logo"><img src="/assets/img/electorials-logo.jpeg"></a>
+    <ul class="menu">
         {% for item in site.data.navigation %}
         <li class="{{ item.class }}">
             <a href="{{ item.link }}">{{ item.name }}</a>
         </li>
         {% endfor %}
     </ul>
-</nav> -->
+</nav>
 
-<nav role="navigation">
+<!-- For dropdown menu -->
+<!-- <nav role="navigation">
     <a href="/" id="logo"><img src="/assets/img/electorials-logo.jpeg"></a>
     <ul class="menu">
         {% for item in site.data.navigation.mainnav %}
@@ -27,4 +28,4 @@
         </li>
         {% endfor %}
     </ul>
-</nav>
+</nav> -->
