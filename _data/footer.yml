@@ -1,27 +1,27 @@
 - name: Arduino Projects
   link: /projects/arduino
-  class: arduino
+  class: arduino footer-item
 
 - name: Raspberry Pi Projects
   link: /projects/raspberry-pi
-  class: raspberry-pi
+  class: raspberry-pi footer-item
 
 - name: General Electronic Projects
   link: /projects/gen-elec
-  class: gen-elec
+  class: gen-elec footer-item
 
 - name: Product Reviews
   link: /reviews/products
-  class: prod-review
+  class: prod-review footer-item
 
 - name: Sponsors
   link: /sponsors
-  class: sponsors
+  class: sponsors footer-item
 
 - name: About Us
   link: /about
-  class: about
+  class: about footer-item
 
 - name: Contact Us
   link: /contact
-  class: contact
+  class: contact footer-item
