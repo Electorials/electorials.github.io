@@ -2,7 +2,7 @@
     <div id="footer-links">
         <ul>{% for item in site.data.footer %}
             <li class="{{ item.class }}">
-                <b><a href="{{ item.link }}">{{ item.name }}</a></b>
+                <a href="{{ item.link }}">{{ item.name }}</a>
             </li>
             {% endfor %}
         </ul>

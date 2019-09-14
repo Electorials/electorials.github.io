@@ -1,6 +1,6 @@
-- name: Home
-  link: /
-  class: home menu-item
+# - name: Home
+#   link: /
+#   class: home menu-item
 
 - name: Arduino Projects
   link: /projects/arduino
