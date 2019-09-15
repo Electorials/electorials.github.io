@@ -54,9 +54,19 @@ nav {
 }
 
 .menu-item a {
-    padding: 1rem .75rem;
-    font-size: .75em;
+    --item-width: 75%;
+    display: block;
+    padding: .125rem;
+    font-size: .875em;
+    width: var(--item-width);
+    transform: translateX(calc((100% - var(--item-width)) / 2 ));
+    line-height: 1.6em;
 }
+
+/* .home a {
+    width: 100%;
+} */
+
 
 .menu-item a:hover {
     background-color: #e2e2e2;
@@ -217,3 +227,13 @@ footer ul li {
     font-size: 1em;
     font-family: 'Lato', sans-serif;
 }
+
+/* * { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
