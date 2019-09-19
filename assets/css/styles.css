@@ -54,19 +54,16 @@ nav {
 }
 
 .menu-item a {
-    --item-width: 75%;
-    display: block;
-    padding: .125rem;
+    --item-width: 100%;
+    display: flex;
+    padding: 1.125rem .875rem;
     font-size: .875em;
     width: var(--item-width);
     transform: translateX(calc((100% - var(--item-width)) / 2 ));
     line-height: 1.6em;
 }
-
-/* .home a {
-    width: 100%;
-} */
-
+/* Navbar overflows at 1175px. Later create media query to change styling at
+1180px or somewhere wider. */
 
 .menu-item a:hover {
     background-color: #e2e2e2;
