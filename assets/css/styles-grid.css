@@ -15,6 +15,10 @@ div {
     margin: 2rem auto;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /***** Nav rules *****/
 nav {
     position: fixed;
@@ -63,7 +67,7 @@ nav {
     line-height: 1.6em;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
-1180px or above. */
+1180px or somewhere wider. */
 
 .menu-item a:hover {
     background-color: #e2e2e2;
@@ -111,18 +115,14 @@ main {
     /* margin-top: var(--nav-height); */
 }
 
-main div {
-
+main div > * {
+    margin: auto 2rem;
 }
-
-/* #hero {
-    margin: 2rem 5rem;
-} */
 
 #hero {
     text-align: center;
-    /* max-height: 90em; */
-    width: 100%;
+    width: 100vw;
+    margin: 0;
     min-height: 35em;
 
     background-image: url(/assets/img/banners/home-hero.jpg);
@@ -160,9 +160,9 @@ main div {
     margin: 2rem;
 }
 
-#introduction {
+/* #introduction {
     margin: auto 2rem;
-}
+} */
 
 /***** Footer content rules *****/
 footer {

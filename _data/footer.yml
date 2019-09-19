@@ -7,11 +7,11 @@
   class: raspberry-pi footer-item
 
 - name: General Electronics Projects
-  link: /projects/gen-elec
+  link: /projects/general-electronics
   class: gen-elec footer-item
 
 - name: Product Reviews
-  link: /reviews/products
+  link: /reviews/product
   class: prod-review footer-item
 
 - name: Sponsors

@@ -11,7 +11,7 @@
   class: raspberry-pi menu-item
 
 - name: General Electronics Projects
-  link: /projects/gen-elec
+  link: /projects/general-electronics
   class: gen-elec menu-item
 
 - name: Product Reviews
@@ -19,7 +19,7 @@
   class: prod-review menu-item
 
 - name: Company Reviews
-  link: /company
+  link: /reviews/company
   class: company menu-item
 
 - name: Contact Us
