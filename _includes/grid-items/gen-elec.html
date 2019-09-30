@@ -1,0 +1,9 @@
+<div class="grid-wrapper">
+    {% for item in site.data.grid-items.gen-elec %}
+        <div class="project-panel">
+            <span class="button">
+                <a href="{{ item.link }}">{{ item.name }}</a>
+            </span>
+        </div>
+    {% endfor %}
+</div>
