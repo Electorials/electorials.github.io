@@ -11,7 +11,7 @@
   link: /projects/arduino/project-003-lm35-temperature-sensor
 
 - name: "Project 004: PIR Motion Sensor"
-  link: /projects/arduino/project-0-pir-motion-sensor
+  link: /projects/arduino/project-004-pir-motion-sensor
 
 - name: "Project 005: DHT Humidity Sensor"
   link: /projects/arduino/project-005-dht-humidity-sensor
