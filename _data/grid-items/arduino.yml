@@ -2,7 +2,7 @@
   link: /projects/arduino/arduino-setup
 
 - name: "Project 001: LEDs"
-  link: /projcets/arduino/project-001-led
+  link: /projects/arduino/project-001-led
 
 - name: "Project 002: HC-SR04 Ultrasonic Sensor"
   link: /projects/arduino/project-002-hc-sr04-ultrasonic-sensor
