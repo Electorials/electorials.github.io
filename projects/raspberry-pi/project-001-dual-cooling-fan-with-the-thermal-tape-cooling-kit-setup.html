@@ -8,29 +8,129 @@ title: Dual Cooling Fan with the Thermal Tape Cooling Kit Setup
 <section>
     <h3>Introduction</h3>
 
-    <p></p>
+    <p>For any Raspberry Pi, cooling the board is very critical from preventing any potential permanent damage to its system; especially when running high-powered softwares, such as video games, media centres, graphics, etc. A solution to this problem would be cooling, whether it is passive or active cooling. This project involves setting up an active cooling system involving a dual cooling fan and its supporting thermal tape for both the processor chip (Broadcom BCM2837 SoC on RPI3) and the Ethernet chip (SMSC LAN9514 on RPI3) on-board. This cooling fan is compatible for the Raspberry Pi 2 and 3 along with their respective models. These products really help to bring down the Pi's temperature greatly as seen below.</p>
 
-    <p></p>
+    <img src="/assets/img/ras-pi/run.jpeg" alt="Powered Raspberry Pi 3 Model B with dual fans">
 
-    <p></p>
+    <table>
+        <caption>
+            Temperature Testing Specifications
+        </caption>
+        <tr>
+            <th>Board used:</th>
+            <td>Raspberry Pi 3 Model B</td>
+        </tr>
+        <tr>
+            <th>Input Voltage (Power Supply Voltage):</th>
+            <td>+5.2 volts, 2.5 amps</td>
+        </tr>
+        <tr>
+            <th>Surrounding Environmental (Ambient) Temperature:</th>
+            <td>~30.9°C</td>
+        </tr>
+        <tr>
+            <th>SD Card Capacity:</th>
+            <td>32 GB</td>
+        </tr>
+        <tr>
+            <th>Operating System:</th>
+            <td>Raspbian</td>
+        </tr>
+        <tr>
+            <th>Testing Software Command (through the Terminal):</th>
+            <td><code>vcgencmd measure_temp</code></td>
+        </tr>
+        <tr>
+            <th>Testing Time Span:</th>
+            <td>15 minutes</td>
+        </tr>
+        <tr>
+            <th>Testing Hardware Frequency:</th>
+            <td>1250 MHz</td>
+        </tr>
+        <tr>
+            <th>Idle Raspberry Pi 3 Temperature (without dual fan):</th>
+            <td>~51°C</td>
+        </tr>
+        <tr>
+            <th>Idle Raspberry Pi 3 Temperature (with dual fan):</th>
+            <td>~44°C</td>
+        </tr>
+    </table>
 </section>
+
+<hr>
 
 <section>
-    <h3></h3>
+    <h3>Setting it up</h3>
 
-    <p></p>
+    <div class="step">
+        <img src="/assets/img/ras-pi/img-3343.jpeg"> <!-- alt="Some kind of mat? Ask about this later." -->
 
-    <p></p>
+        <p>1. First, you would have to decide which thermal tape you will be using, the thicker thermal tape of the thiner thermal tape. The main purpose of thermal tape is to speed up the heat transfer from the bottom surface to the surface above the tape. So, in this case, the thermal tape will provide an adhesive for the dual fan and speed up the heat transfer to the dual fans for heat dissipation, thus, the thicker piece of tape is better. However, the thermal tape size mainly depends on the space you have on the Raspberry Pi and if there is another space to fit the dual fan with the case or without. <i>The thicker thermal tape will be used as an example for this project.</i></p>
+    </div>
 
-    <p></p>
+    <div class="step">
+        <img src="/assets/img/ras-pi/img-3390-1.jpeg" alt="Unpowered Raspberry Pi 3 Model B dusted, with underside of dual fan being cleaned">
+
+        <p>2. Before the further steps, make sure the Raspberry Pi surface and the dual fan surface is dusted off to prevent any interferences of the adhesive and there isn't any power applied to the Pi or the fan.</p>
+    </div>
+
+    <div class="step">
+        <img src="/assets/img/ras-pi/very-good.jpeg" alt="Peeling off adhesive-protecting piece from one side of thermal tape">
+
+        <p>3. Peel off only one side of the thermal tape for now.</p>
+    </div>
+
+    <div class="step">
+        <img src="/assets/img/ras-pi/img-3413.jpeg" alt="Preparing to adhere exposed sticky side of thermal tape to underside of dual fan">
+        <img src="/assets/img/ras-pi/superb.jpg" alt="Sticky side of thermal tape adhered to underside of dual fan">
+
+        <p>4. Paste the sticky side of the thermal tape to the bottom surface of the dual fan.</p>
+    </div>
+
+    <div class="step">
+        <img src="/assets/img/ras-pi/img-3418.jpg" alt="Peeling off adhesive-protecting piece from other side of thermal tape while adhered to underside of dual fan">
+
+        <p>5. Next, peel the other side of the thermal tape which is the one exposed and not the one stuck.</p>
+    </div>
+
+    <div class="step">
+        <img src="/assets/img/ras-pi/img-3421.jpeg" alt="Positioning the dual fan above processor and Ethernet chips with wires facing onboard GPIO pins">
+
+        <p>6. Position the dual fan above the two chips (the main processor and the Ethernet chip) on the Raspberry Pi with the wires facing towards the set of pin headers.</p>
+    </div>
+
+    <div class="step">
+        <img src="/assets/img/ras-pi/setting.jpeg" alt="Adhering dual fan onto Raspberry Pi">
+
+        <p>7. Quickly paste the dual fans onto the Raspberry Pi in one, rapid motion.</p>
+    </div>
+
+    <div class="step">
+        <img src="/assets/img/ras-pi/comeon.jpeg" alt="Connecting dual fan's power connector on Raspberry Pi pins">
+        <img src="/assets/img/ras-pi/unnamed.jpeg" alt="Zoom-in of dual fan's power connector on Raspberry Pi pins">
+
+        <p>8. Connect the fan's pins to the 5v and GND pins on the Raspberry Pi as seen by the images above.</p>
+    </div>
 </section>
+
+<hr>
 
 <section>
     <h3>Conclusion</h3>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
+    <p>From the test results and my experiments, this dual fan really helps with the heat dissipation through the use of active cooling rather than the ordinary aluminium heatsinks which doesn't help that much. This product is widely used in executing various games and scripts which requires a lot of power to run, and it often results in heat which can lead to the Pi crashing. All in all, I think this product is an excellent solution to many overheating issues.</p>
 </section>
+
+<hr>
+
+<div class=project-link>
+	<p>Be sure to check out the <a href="/reviews/product/review-007-raspberry-pi-dual-cooling-fan-thermal-tape-ram-copper-heatsink.html">review for this product here</a>!</p>
+</div>
+
+<hr>
+
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact">contact us</a> for any inquiries!</p>
+</div>

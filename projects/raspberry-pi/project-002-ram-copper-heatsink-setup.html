@@ -8,29 +8,105 @@ title: RAM Copper Heatsink Setup
 <section>
     <h3>Introduction</h3>
 
-    <p></p>
+    <p>This Raspberry Pi RAM Copper Heatsink could be used for all the models of the Raspberry Pi 2 and 3 which is mainly suited for the RAM chip (Epida variant on RPI3). The heatsink is largely used for keeping the temperature down on the RAM chip as it could get pretty hot during runs of high-powered softwares or external devices due to the fact that heat from the overall board has to escape, and one path is through the underside of the Raspberry Pi; passing towards the direction of the Raspberry Pi RAM chip. Even though this copper heatsink may seem small, copper is a very good conductor of heat, so it could help bring the temperature down by dissipating heat from the chip quickly. Below are a few specifications as I have tested and a tutorial on how to set this product up on your Pi:</p>
 
-    <p></p>
-
-    <p></p>
+    <img src="/assets/img/ras-pi/lolaosd.jpeg" alt="Underside of powered Raspberry Pi 3 model B with copper heatsink attached to RAM chip">
+    
+    <table>
+        <caption>
+            Temperature Testing Specifications
+        </caption>
+        <tr>
+            <th>Board used:</th>
+            <td>Raspberry Pi 3 Model B</td>
+        </tr>
+        <tr>
+            <th>Input Voltage (Power Supply Voltage):</th>
+            <td>+5.2 volts, 2.5 amps</td>
+        </tr>
+        <tr>
+            <th>Surrounding Environmental (Ambient) Temperature:</th>
+            <td>~31.3°C</td>
+        </tr>
+        <tr>
+            <th>SD Card Capacity:</th>
+            <td>32 GB</td>
+        </tr>
+        <tr>
+            <th>Operating System:</th>
+            <td>Raspbian</td>
+        </tr>
+        <tr>
+            <th>Testing Software Command (through the Terminal):</th>
+            <td><code>vcgencmd measure_temp</code></td>
+        </tr>
+        <tr>
+            <th>Testing Time Span:</th>
+            <td>15 minutes</td>
+        </tr>
+        <tr>
+            <th>Testing Hardware Frequency:</th>
+            <td>1250 MHz</td>
+        </tr>
+        <tr>
+            <th>Idle Raspberry Pi 3 Temperature (without dual fan):</th>
+            <td>~51°C</td>
+        </tr>
+        <tr>
+            <th>Idle Raspberry Pi 3 Temperature (with dual fan):</th>
+            <td>~47°C</td>
+        </tr>
+    </table>
 </section>
+
+<hr>
 
 <section>
-    <h3></h3>
-
-    <p></p>
-
-    <p></p>
-
-    <p></p>
+    <h3>Setting it up</h3>
+    
+    <div class="step">
+        <img src="/assets/img/ras-pi/2.jpeg" alt="Underside of unpowered Raspberry Pi 3 Model B, RAM chip being cleaned">
+        
+        <p>1. First, dust of any dirt and access dust from the RAM chip and the underside of your Raspberry Pi to prevent any interferences of the adhesive and its contact to the RAM chip. Also, as a safety precaution, make sure no power is applied to your Pi.</p>
+    </div>
+    
+    <div class="step">
+        <img src="/assets/img/ras-pi/img-3514.jpg" alt="Peeling off adhesive tape from back of copper heatsink">
+        
+        <p>2. Tear the adhesive tape gently off of the back of the copper heatsink.</p>
+    </div>
+    
+    <div class="step">
+        <img src="/assets/img/ras-pi/img-3516.jpg" alt="Positioning the copper heatsink above RAM chip">
+        
+        <p>3. Position the RAM copper heatsink on top of the Raspberry Pi RAM chip straight with the exposed, teared-off side facing the chip itself.</p>
+    </div>
+    
+    <div class="step">
+        <img src="/assets/img/ras-pi/tee.jpeg" alt="Adhering copper heatsink onto RAM chip">
+        
+        <p>4. Paste the heatsink on the chip; aligned properly and securely. Do this in one swift motion.</p>
+    </div>
 </section>
+
+<hr>
 
 <section>
     <h3>Conclusion</h3>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
+    <p>After my observations and the test results, this product can only make a slight change in temperature, but when your Raspberry Pi is really hot, it can save it from crashing or throttling which is better than not having a heatsink at all. On my Raspberry Pi, this is a necessity as I always run media centres, gaming softwares and many programming softwares, thus, I need to get as much heat away from the Pi as possible.</p>
+    
+    <p>Overall, I think that this isn't a complete necessary product, but if you have it, that's an major advantage to you.</p>
 </section>
+
+<hr>
+
+<div class="project-link">
+    <p>Be sure to check out the <a href="/reviews/product/review-007-raspberry-pi-dual-cooling-fan-thermal-tape-ram-copper-heatsink.html">review for this product here.</a></p>
+</div>
+
+<hr>
+
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+</div>
