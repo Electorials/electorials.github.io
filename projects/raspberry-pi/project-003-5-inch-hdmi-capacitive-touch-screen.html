@@ -13,6 +13,7 @@ title: 5-inch HDMI Capacitive Touch Screen Display Setup
     <p>There are even cases suited for this display and the Raspberry Pi available additionally. This display mainly includes a capacitive touch feature which can assist you around in navigating around the display without a mouse. Plus, this display has a very high resolution, a HD display for displaying pictures and images.</p>
     
     <p>To make your life easier, the setup of this touch screen display is fairly simple, especially when adapting it to the Pi and modifying the configuration files. Once the setup steps are out of the way, it will work perfectly as seen in the images below:</p>
+    
     <img src="/assets/img/ras-pi/omg.jpg" alt="Powered Raspberry Pi connected to 5-inch capacitive touch screen display, showing Raspbian desktop background">
     <img src="/assets/img/ras-pi/2018-05-03-213607-800x480-scrot.png" alt="Screenshot of Raspbian desktop background from the touch screen display">
 </section>
@@ -23,46 +24,49 @@ title: 5-inch HDMI Capacitive Touch Screen Display Setup
     <h3>Setting it up</h3>
 
     <div class="step">
-        <img src="/assets/img/ras-pi/img-3523.jpg" alt="">
+        <img src="/assets/img/ras-pi/img-3523.jpg" alt="Male ends of HDMI cable, male type-A and micro B ends of USB cable">
         
-        <p>1. Before you even start, you would need the appropriate accessories to properly set this display up, which includes: a Male-to-Male HDMI cable, 2 Micro-USB power cables (one is optional, one is needed) and additional Pi accessories (mouse, keyboard, WiFi dongle, etc.). You can see clear examples of those cables in the picture below. The HDMI cable (black cable below) will be used for transferring data and all the information from the Pi to the screen such as all the visuals and display information. However, the micro-USB cables (a white micro-USB cable is below, you will need 2 micro-USB cables) will be utilised for powering up the display, powering up the Raspberry Pi (powering the Pi using a micro-USB cable is optional) and making the touch screen functionalities work on the display.</p>
+        <p>1. Before you even start, you would need the appropriate accessories to properly set this display up, which includes: a Male-to-Male HDMI cable, 2 Micro-USB power cables (one is optional, one is needed) and additional Pi accessories (mouse, keyboard, WiFi dongle, etc.). You can see clear examples of those cables in the picture below.</p>
+        
+        <p>The HDMI cable (black cable below) will be used for transferring data and all the information from the Pi to the screen such as all the visuals and display information. However, the micro-USB cables (a white micro-USB cable is below, you will need 2 micro-USB cables) will be utilised for powering up the display, powering up the Raspberry Pi (powering the Pi using a micro-USB cable is optional) and making the touch screen functionalities work on the display.</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/img-3548.jpg" alt="">
+        <img src="/assets/img/ras-pi/img-3548.jpg" alt="Unpowered Raspberry Pi connecting to touch screen display via HDMI">
         
         <p>2. After you have gathered the cables needed, first, plug the HDMI cable from your Raspberry Pi's HDMI port to the display's HDMI port, exactly like the image shows above.</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/img-3552.jpg" alt="">
+        <img src="/assets/img/ras-pi/img-3552.jpg" alt="Unpowered Raspberry Pi connecting to touch screen display via USB">
         
         <p>3. Then, plug in the micro-USB cable from one of your Pi's USB power output ports (4 ports on the Raspberry Pi 3) to the display's input USB port as seen in the image above.</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/img-3550.jpg" alt="">
+        <img src="/assets/img/ras-pi/img-3550.jpg" alt="USB accessories connecting to unpowered Raspberry Pi">
         
         <p>4. Plug in any of your other USB or external accessories which you normally use with your Raspberry Pi such as a keyboard, mouse, WiFi dongle, etc to your Raspberry Pi's USB ports.</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/img-3565.jpg" alt="">
+        <img src="/assets/img/ras-pi/img-3565.jpg" alt="microUSB power cable powering the Raspberry Pi">
         
         <p>5. Power up your Raspberry Pi now, either by the micro-USB input port on your Pi, the GPIO pins, or by the USB ports (only available on the original Raspberry Pi). For this example, I will be using the micro-USB input port on my Raspberry Pi.</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/2018-05-01-165703-640x480-scrot.png" alt="">
-        <img src="/assets/img/ras-pi/2018-05-01-172954-640x480-scrot.png" alt="">
+        <img src="/assets/img/ras-pi/2018-05-01-165703-640x480-scrot.png" alt="Raspbian menu open with cursor on top of 'Terminal'">
+        <img src="/assets/img/ras-pi/2018-05-01-172954-640x480-scrot.png" alt="Terminal window opened, ready for input">
         
         <p>6. Once your Raspberry Pi has booted up, navigate to the Terminal on your OS, whether it is NOOBS or Raspbian. The Terminal is most likely located in the menu toolbar on the top left of your screen. For this example, Raspbian will be used, but NOOBS will work the same way, more or less. Note: When you boot up the Pi with your OS, you may see a black area to the right of the screen (this is not seen in the pictures below), but, do not worry as you will fix that later on with the steps below.</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/2018-05-01-185935-640x480-scrot.png" alt="">
-        <img src="/assets/img/ras-pi/2018-05-01-190032-640x480-scrot.png" alt="">
+        <img src="/assets/img/ras-pi/2018-05-01-185935-640x480-scrot.png" alt="`sudo nano /boot/config.txt` typed in terminal">
+        <img src="/assets/img/ras-pi/2018-05-01-190032-640x480-scrot.png" alt="/boot/config.txt open in Nano in terminal">
         
         <p>7. Type the following command into the Terminal to run the configuration file, the additional picture below also shows the command written out onto the Terminal:</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/2018-05-01-224102-640x480-scrot.png" alt="">
+        <img src="/assets/img/ras-pi/2018-05-01-224102-640x480-scrot.png" alt="Lines of code from below added to /boot/config.txt">
         
         <p>8. Scroll to the bottom or anywhere empty of that configuration page and add the following configuration text on that same page without changing anything else. The picture shows what it is like in the Terminal (in this example, I wrote the configuration text at the bottom of the configuration page as seen in the picture):</p>
+        
         <pre><code>
             framebuffer_width=800
             framebuffer_height=480
@@ -73,17 +77,17 @@ title: 5-inch HDMI Capacitive Touch Screen Display Setup
         </code></pre>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/2018-05-01-224144-640x480-scrot.png" alt="">
-        <img src="/assets/img/ras-pi/2018-05-01-224341-640x480-scrot.png" alt="">
-        <img src="/assets/img/ras-pi/2018-05-01-224521-640x480-scrot.png" alt="">
+        <img src="/assets/img/ras-pi/2018-05-01-224144-640x480-scrot.png" alt="Nano interface asking to 'Save modified buffer' after pressing Ctrl+x">
+        <img src="/assets/img/ras-pi/2018-05-01-224341-640x480-scrot.png" alt="Nano interface showing file name to write to or to write as after pressing Y, file name being '/boot/config.txt'">
+        <img src="/assets/img/ras-pi/2018-05-01-224521-640x480-scrot.png" alt="Nano exited after pressing Enter, back to terminal interface">
         
         <p>9. After you have added in the text above, press "Ctrl + X" to exit, followed by pressing "Y" to save the changes and then press "Enter" to write the new test changes to the file.</p>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/2018-05-03-202324-640x480-scrot.png" alt="">
+        <img src="/assets/img/ras-pi/2018-05-03-202324-640x480-scrot.png" alt="`sudo reboot` typed in terminal">
         <p>or</p>
-        <img src="/assets/img/ras-pi/2018-05-03-203317-640x480-scrot.png" alt="">
-        <img src="/assets/img/ras-pi/2018-05-03-204928-640x480-scrot.png" alt="">
+        <img src="/assets/img/ras-pi/2018-05-03-203317-640x480-scrot.png" alt="Raspbian menu opened with cursor on top of 'Shutdown...'">
+        <img src="/assets/img/ras-pi/2018-05-03-204928-640x480-scrot.png" alt="'Shutdown Options' dialog box, asking to shutdown, reboot, or logout. 'Shutdown' is highlighted.">
         
         <p>10. Reboot your Raspberry Pi to initiate the new settings added by using the command  below in the Terminal or by manually shutting it down as seen in the pictures below. After this reboot, the display will fit the screen and it will be working normally. When you use the command function to restart your Raspberry Pi, make sure to press "Enter" after writing down the following command below and as seen in the image above:</p>
         <pre><code>
@@ -91,7 +95,7 @@ title: 5-inch HDMI Capacitive Touch Screen Display Setup
         </code></pre>
     </div>
     <div class="step">
-        <img src="/assets/img/ras-pi/2018-05-03-213607-800x480-scrot.png" alt="">
+        <img src="/assets/img/ras-pi/2018-05-03-213607-800x480-scrot.png" alt="Raspbian desktop">
         
         <p>11. Now, after you have rebooted your Raspberry Pi as in the step above, your Raspberry Pi's resolution should be completed with no black, empty screen area anywhere on the display. It should look exactly like the image above:</p>
     </div>
@@ -102,11 +106,9 @@ title: 5-inch HDMI Capacitive Touch Screen Display Setup
 <section>
     <h3>Conclusion</h3>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
+    <p>After doing tests with this 5-inch HDMI Capacitive Touch Screen Display and adding it to my Raspberry Pi, I would highly recommend this product to anybody, whether you want to make it portable or not. When you want to travel or move around, you could easily take your Raspberry Pi with you, without the need for a larger monitor when you have this display. This display also enables you to not need to many additional accessories such as a mouse or an extra power supply for a separate screen when you have this 5-inch display. The resolution is also very clear, mimicking what it would look like on a bigger monitor.</p>
+    
+    <p>Overall, this display isn't a compulsory part to your Pi but it is suggested for any of your uses.</p>
 </section>
 
 <hr>
@@ -114,6 +116,9 @@ title: 5-inch HDMI Capacitive Touch Screen Display Setup
 <div class="project-link">
     <p>Be sure to check out the <a href="/reviews/product/review-010-5-inch-hdmi-capacitive-touch-screen-display.html">review for this product here</a>.</p>
 </div>
+
+<hr>
+
 <div class="contact">
-    <p>Enjoy! Free free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
 </div>
