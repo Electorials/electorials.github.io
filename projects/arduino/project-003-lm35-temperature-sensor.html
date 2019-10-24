@@ -8,62 +8,115 @@ title: LM35 Temperature Sensor
 <section>
     <h3>Before starting the project...</h3>
 
-    <p class=credits></p>
+    <p class=credits>Credits go to Tapan Mojidra on <a href="https://www.instructables.com/id/ARDUINO-TEMPERATURE-SENSOR-LM35/">www.instructables.com/id/ARDUINO-TEMPERATURE-SENSOR-LM35/</a></p>
 
-    <p></p>
+    <picture>
+        <source srcset="/assets/img/arduino/p163.webp" type="image/webp">
+        <img src="/assets/img/arduino/p163.png" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/2017-04-16-201226-1680x1050-scrot.webp" type="image/webp">
+        <img src="/assets/img/arduino/2017-04-16-201226-1680x1050-scrot.png" alt="">
+    </picture>
 
-    <p></p>
+    <p>This project is a simple project which can be use as a thermometer. It can sense the temperature it is put around and transmit it to degrees Celsius. It consists of very little parts which is cheap and reliable. This project consists of a LM35 Temperature Sensor which is the most often used. To make this project, the parts needed are:</p>
+
+    <ul>
+        <li>1 Arduino (the Keyestudio Uno is used in this example)</li>
+        <li>1 LM35 Temperature Sensor</li>
+        <li>3 Jumper Wires (Male to Male)</li>
+        <li>1 USB Data Cable (depends on the Arduino)</li>
+        <li>1 breadboard</li>
+    </ul>
 </section>
+
+<hr>
 
 <section>
     <h3>Mounting the circuit</h3>
 
-    <p></p>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-2-for-lm35-temperature-sensor-project.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-2-for-lm35-temperature-sensor-project.png" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-for-lm35-temperature-sensor-project.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-for-lm35-temperature-sensor-project.png" alt="">
+    </picture>
 
-    <p></p>
+    <p>Let's start making the circuit. Remove the USB cable from the Arduino before starting this project.</p>
 
-    <p></p>
+    <ol>
+        <li>First, place the LM35 anywhere horizontally on your breadboard, the flat side of the sensor must be facing you.</li>
+        <li>Then, connect three wires under the three pins of the sensor.</li>
+        <li>
+            <ul>
+                <li>The wire on the left will go to the 5v (+5 volts) on the Arduino.</li>
+                <li>The middle wire will go to A1 (analog pin 1).</li>
+                <li>The wire on the right will go to GND (-) on the Arduino.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <p>Upload the code and open the serial monitor as readings of the temperature is shown. Make sure that the serial monitor is on 9600 bauds. Use the code below:</p>
 </section>
+
+<hr>
 
 <section>
 	<h3>The code</h3>
 
 	<p></p>
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+	<figure>
+	    <figcaption>Arduino {{ page.title }} Project Code</figcaption>
 
-		    <pre><code>
+	    <pre><code>
+    int val;
+    int tempPin = 1;
 
-			</code></pre>
-		</figure>
-
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
-
-		    <pre><code>
-
-			</code></pre>
-		</figure>
-
+    void setup()
+    {
+      Serial.begin(9600);
+    }
+    void loop()
+    {
+      val = analogRead(tempPin);
+      float mv = ( val/1024.0)*5000;
+      float cel = mv/10;
+      float farh = (cel*9)/5 + 32;
+      Serial.print("TEMPRATURE = ");
+      Serial.print(cel);
+      Serial.print("*C");
+      Serial.println();
+      delay(1000);
+    /* uncomment this to get temperature in farenhite
+    Serial.print("TEMPRATURE = ");
+    Serial.print(farh);
+    Serial.print("*F");
+    Serial.println();
+    */
+    }
+		</code></pre>
+	</figure>
 </section>
+
+<hr>
 
 <section>
     <h3>About the code</h3>
 
-    <p></p>
+    <p>The two first lines of the code are variables. It shows which pin the wire connects to. They are integers and you can prove that they do start with <i>int</i>.</p>
 
-    <p></p>
+    <p>The void setup is really simple. You only start a serial connection with the Arduino at 9600 bauds.</p>
 
-    <p></p>
+    <p>The four first lines of void loop, they are calculating what the Arduino will do to determine the temperature. It's just some math equations you don't need to worry about. The five other lines, in void loop, will print the required words for the temperature readings to be intelligible by you in serial monitor. The words are temperature, cel and C.</p>
+
+    <p>The other second half will print the same thing except for cel, which will be farh and C, which will be F (it's optional). Uncomment that section if you want to use it by taking away the first line of that section. The code might have looked indomitable before, but it looks way less impressive now.</p>
 </section>
 
-<section>
-    <h3>Conclusion</h3>
+<hr>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+</div>

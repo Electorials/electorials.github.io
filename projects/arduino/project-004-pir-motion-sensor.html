@@ -8,62 +8,96 @@ title: PIR Motion Sensor
 <section>
     <h3>Before starting the project...</h3>
 
-    <p class=credits></p>
+    <p class=credits>Credits go to <span class="underline">educ8s.tv</span> on YouTube at <a href="https://youtube/u4bdmXqppB8">https://youtube/u4bdmXqppB8</a>.</p>
+
+    <picture>
+        <source srcset="/assets/img/arduino/picture-3-for-pir-motion-sensor-project.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-3-for-pir-motion-sensor-project.jpeg" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-4-for-pir-motion-sensor-project.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-4-for-pir-motion-sensor-project.jpeg" alt="">
+    </picture>
 
     <p></p>
 
     <p></p>
 </section>
+
+<hr>
 
 <section>
     <h3>Mounting the circuit</h3>
 
-    <p></p>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-for-pir-motion-sensor-project_2.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-for-pir-motion-sensor-project_2.png" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-2-for-pir-motion-sensor-project_2.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-2-for-pir-motion-sensor-project_2.png" alt="">
+    </picture>
 
-    <p></p>
+    <p>Now, that you know a little bit about this project, let's begin with the hardware side. Remember to always unplug the power supply and disconnect any circuits from the current Arduino board.</p>
 
-    <p></p>
+    <ol>
+        <li>First of all, plug all three female pins to the PIR Motion Sensor.</li>
+        <li>Then, connect the positive (+) pin of the sensor to 5v (+5 volts) of your Arduino, the ground (-) pin of your sensor to GND (-) on your Arduino, and the output pin of the sensor to the D9 (digital pin 9) on your Arduino.</li>
+        <li>Next, connect a LED with the cathode leg going to the GND (-) on your Arduino and the anode of the LED to D13 (digital pin 13) on your Arduino.</li>
+    </ol>
+
+    <p>Once all of the connections have been done, you are ready to go onto the software side of this project.</p>
 </section>
+
+<hr>
 
 <section>
 	<h3>The code</h3>
 
 	<p></p>
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+	<figure>
+	    <figcaption>Arduino {{ page.title }} Project Code</figcaption>
 
-		    <pre><code>
+	    <pre><code>
+    int ledPin = 13;
+    int pirPin = 9;
+    int val = 0;
+    void setup()
+    {
+      pinMode(ledPin, OUTPUT);
+      pinMode(pirPin, INPUT);
+    }
+    void loop()
+    {
+      val = digitalRead(pirPin);
+      digitalWrite(ledPin, val);
 
-			</code></pre>
-		</figure>
-
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
-
-		    <pre><code>
-
-			</code></pre>
-		</figure>
-
+    if (val ==1)
+      digitalWrite(ledPin, LOW);
+    }
+		</code></pre>
+	</figure>
 </section>
+
+<hr>
 
 <section>
     <h3>About the code</h3>
 
-    <p></p>
+    <p>The code is very easy to read because it uses an easy language and easy writing to understand.</p>
 
-    <p></p>
+    <p>The first three lines of the Code starts with declaration of variables from hardware such as the <i>LED</i> uses pin 13 and the <i>PIR</i> Sensor uses pin 9. The value uses pin 0 because it is the receive pin.</p>
 
-    <p></p>
+    <p>Next, is the usual <i>void setup</i> which indicates the first part of the Code, that describes the LED as <i>OUTPUT</i> (off). It also means the PIR Sensor is <i>INPUT</i> (on).</p>
+
+    <p>Lastly, the <i>void loop</i> phrase loops the value first as we've mention in the beginning. <i>Value</i> in this line means that it will read the <i>PIR Sensor</i> and give information to the microcontroller on the next step in the process. The last line is the last step and will be repeated with the second last line.</p>
+
+    <p>Our main line is the last line because it outputs the whole code and reacts to the information its given, the <i>LED</i> is turned off.</p>
 </section>
 
-<section>
-    <h3>Conclusion</h3>
+<hr>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+</div>

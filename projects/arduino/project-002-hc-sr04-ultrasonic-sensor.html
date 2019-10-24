@@ -8,62 +8,132 @@ title: HC-SR04 Ultrasonic Sensor
 <section>
     <h3>Before starting the project...</h3>
 
-    <p class=credits></p>
+    <p class=credits>Credits go to Netram Technologies.</p>
 
-    <p></p>
+    <picture>
+        <source srcset="/assets/img/arduino/p161.webp" type="image/webp">
+        <img src="/assets/img/arduino/p161.png" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/pic.webp" type="image/webp">
+        <img src="/assets/img/arduino/pic.png" alt="">
+    </picture>
 
-    <p></p>
+    <p>This basic project is very essential especially if you are a beginner. It can be useful in the future when building security systems, collecting data, or making a robot. The code is very accurate, measuring in centimetres. If you didn't know, an ultrasonic sensor works when the waves it sends out bounces on the nearest object to it and bounces back measuring the distance between the two objects. This doesn't use much parts but the main part is the HC-SR04, a ultrasonic sensor. This specific sensor is good quality and can measure far distances easily. It can be found almost every where including various online stores.</p>
+
+    <p>The parts needed in this project are:</p>
+
+    <ul>
+        <li>1 Arduino (the Keyestudio Uno is used in this example)</li>
+        <li>1 USB Data Cable (depends on the Arduino)</li>
+        <li>4 Jumper Wires (Male to Male)</li>
+        <li>1 HC-SR04​ Ultrasonic Sensor</li>
+        <li>1 breadboard</li>
+    </ul>
 </section>
+
+<hr>
 
 <section>
     <h3>Mounting the circuit</h3>
 
-    <p></p>
+    <picture>
+        <source srcset="/assets/img/arduino/hmg.webp" type="image/webp">
+        <img src="/assets/img/arduino/hmg.png" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/hlyi.webp" type="image/webp">
+        <img src="/assets/img/arduino/hlyi.png" alt="">
+    </picture>
 
-    <p></p>
+    <p>Let's start mounting the circuit. Always unplug the USB cable out of your computer for safety reasons.</p>
 
-    <p></p>
+    <ol>
+        <li>First, place the ultrasonic sensor horizontally onto the breadboard.</li>
+        <li>Behind, the sensor, insert the 4 jumper wires into the pins.</li>
+        <li>Connect the wire that is behind the VCC (+) on the sensor into 5v (+5 volts) on the Arduino.</li>
+        <li>Next, connect the wire that is behind the TRIG (signal) pin on the sensor into D8 (digital pin 8).</li>
+        <li>Then, connect the wire behind ​ECHO ​on the sensor to D7 (digital pin 7).</li>
+        <li>Finally connect ​GND (-) on the sensor to GND(-) on the Arduino.</li>
+    </ol>
+
+    <p>Use the code below and open the serial monitor to 9600 bauds. You should see the results coming in through the sensor and onto serial monitor after uploading the code. Use the code below:​</p>
 </section>
+
+<hr>
 
 <section>
 	<h3>The code</h3>
 
 	<p></p>
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+	<figure>
+	    <figcaption>Arduino {{ page.title }} Project Code</figcaption>
 
-		    <pre><code>
+	    <pre><code>
+    #define echoPin 7 // Echo Pin
+    #define trigPin 8 // Trigger Pin
+    #define LEDPin 13 // Onboard LED
+    int maximumRange = 200; // Maximum range needed
+    int minimumRange = 0; // Minimum range needed
+    long duration, distance; // Duration used to calculate distance
 
-			</code></pre>
-		</figure>
+    void setup() {
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+      Serial.begin (9600);
+      pinMode(trigPin, OUTPUT);
+      pinMode(echoPin, INPUT);
+      pinMode(LEDPin, OUTPUT); // Use LED indicator (if required)
+    }
 
-		    <pre><code>
+    void loop() {
 
-			</code></pre>
-		</figure>
+    /* The following trigPin/echoPin cycle is used to determine the
+    distance of the nearest object by bouncing soundwaves off of it. */
+      digitalWrite(trigPin, LOW);
+      delayMicroseconds(2);
+      digitalWrite(trigPin, HIGH);
+      delayMicroseconds(10);
+      digitalWrite(trigPin, LOW);
+      duration = pulseIn(echoPin, HIGH);
+    //Calculate the distance (in cm) based on the speed of sound.
+      distance = duration/58.2;
+      if (distance >= maximumRange || distance <= minimumRange){
+    /* Send a negative number to computer and Turn LED ON
+    to indicate "out of range" */
+        Serial.println("Can't read");
+        digitalWrite(LEDPin, HIGH);
+    }
+    else {
 
+    /* Send the distance to the computer using Serial protocol, and
+    turn LED OFF to indicate successful reading. */
+      Serial.println(distance);
+      digitalWrite(LEDPin, LOW);
+    }
+    //Delay 50ms before next reading.
+    delay(50);
+    }
+		</code></pre>
+	</figure>
 </section>
+
+<hr>
 
 <section>
     <h3>About the code</h3>
 
-    <p></p>
+    <p>The three first lines of the code are basically defining some of the ultrasonic sensor pins. It states which pins connect to which on the Arduino. The next three lines tell you what is the maximum and minimum distance the ultrasonic sensor can reach.</p>
 
-    <p></p>
+    <p>Then we reach <i>void setup</i>, which only runs once. The first line of the <i>void setup</i> tells the serial monitor to start under 9600 bauds. Below, it defines whether the pins are sending info to the computer (OUTPUT) or sending information to the sensor (INPUT). The lines after <i>void setup</i> but before <i>void loop</i> will run only once at the beginning as a setup.</p>
 
-    <p></p>
+    <p>Next comes <i>void loop</i>, which runs over and over again. The lines after <i>void loop</i> are going to loop while the code is running. In <i>void setup</i>, you are setting up the ultrasonic sensor and the serial monitor. In <i>void loop</i>, the different pins of the ultrasonic sensor are either on or off. The pins send information from the readings to be converted for us to read. One of the lines of codes mentions about the distance and whether it is going to show in centimetres. In the serial monitor, there's also a line of code which displays an 'out of range' message.</p>
+
+    <p>The others tell you how long the distance is from the ultrasonic sensor to the nearest object in its perimeter. This is a basic explanation of the code done.</p>
 </section>
 
-<section>
-    <h3>Conclusion</h3>
+<hr>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+</div>

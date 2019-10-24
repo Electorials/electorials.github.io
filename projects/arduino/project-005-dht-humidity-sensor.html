@@ -8,62 +8,155 @@ title: DHT Humidity Sensor
 <section>
     <h3>Before starting the project...</h3>
 
-    <p class=credits></p>
+    <picture>
+        <source srcset="/assets/img/arduino/webp-net-resizeimage.webp" type="image/webp">
+        <img src="/assets/img/arduino/webp-net-resizeimage.jpg" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-2-for-dht22-project.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-2-for-dht22-project.png" alt="">
+    </picture>
 
-    <p></p>
+    <p>This project is based on the DHT sensors which include the: DHT11, DHT21/AM2301 and DHT22/AM2302. In this example project, I'll be using the DHT22 Humidity and Temperature Sensor. We can use this project in a variety of applications such as: a weather station, a clock, a measuring device for a computer or car, etc..</p>
 
-    <p></p>
+    <p>The parts we will be needing are the following:</p>
+
+    <ul>
+        <li>1 Arduino (the Keyestudio Uno is used in this example)</li>
+        <li>1 DHT22/AM2302 Humidity and Temperature Sensor</li>
+        <li>3 Jumper Wires</li>
+        <li>1 10KΩ resistor</li>
+        <li>1 breadboard</li>
+        <li>1 USB Data Cable (depends on the Arduino)</li>
+    </ul>
 </section>
+
+<hr>
 
 <section>
     <h3>Mounting the circuit</h3>
 
-    <p></p>
+    <picture>
+        <source srcset="/assets/img/arduino/dht-schematic.webp" type="image/webp">
+        <img src="/assets/img/arduino/dht-schematic.jpg" alt="">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/schematic.webp" type="image/webp">
+        <img src="/assets/img/arduino/schematic.jpg" alt="">
+    </picture>
+
+    <p>The circuit is very easy to build onto a breadboard. Make sure you remove power from any of the hardware before mounting the circuit. The sensor fits vertically on a diagonal breadboard, fitting into four separate rows. The pins are from left to right; 1 to 4. The first pin is to 5 volts on your Arduino. The second pin is your data pin for connection to digital pin 2, the third pin on your sensor is not used, but your fourth pin is to ground on your Arduino. Connect a 10K ohm resistor between the first (VCC) and second (DATA) pin. That's it for your hardware.</p>
 
     <p></p>
 
     <p></p>
 </section>
+
+<hr>
 
 <section>
 	<h3>The code</h3>
 
-	<p></p>
+	<p>This code is named the DHTtester from Adafruit's DHT sensor library, compatible for the DHT11, DHT22 and DHT21. The code can be downloaded from the Github page: ​<a href="https://github.com/adafruit/DHT-sensor-library">https://github.com/adafruit/DHT-sensor-library​</a></p>
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+    <p>It can also be copied into your Arduino IDE by the code below once the library is downloaded as it is one of its example codes:</p>
 
-		    <pre><code>
+	<figure>
+	    <figcaption>Arduino {{ page.title }} Project Code</figcaption>
 
-			</code></pre>
-		</figure>
+	    <pre><code>
+    // Example testing sketch for various DHT humidity/temperature sensors
+    // Written by ladyada, public domain
+    #include "DHT.h"
+    #define DHTPIN 2     // what digital pin we're connected to
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+    // Uncomment whatever type you're using!
 
-		    <pre><code>
+    //#define DHTTYPE DHT11   // DHT 11
 
-			</code></pre>
-		</figure>
+    //#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
 
+    //#define DHTTYPE DHT21   // DHT 21 (AM2301)
+
+    // Connect pin 1 (on the left) of the sensor to +5V
+
+    // NOTE: If using a board with 3.3V logic like an Arduino Due connect pin 1
+    // to 3.3V instead of 5V!
+
+    // Connect pin 2 of the sensor to whatever your DHTPIN is
+    // Connect pin 4 (on the right) of the sensor to GROUND
+    // Connect a 10K resistor from pin 2 (data) to pin 1 (power) of the sensor
+
+    // Initialize DHT sensor.
+
+    // Note that older versions of this library took an optional third parameter to
+    // tweak the timings for faster processors.  This parameter is no longer needed
+    // as the current DHT reading algorithm adjusts itself to work on faster procs.
+
+    DHT dht(DHTPIN, DHTTYPE);
+
+    void setup() {
+      Serial.begin(9600);
+      Serial.println("DHTxx test!");
+      dht.begin();
+    }
+
+    void loop() {
+      // Wait a few seconds between measurements.
+      delay(2000);
+      // Reading temperature or humidity takes about 250 milliseconds!
+      // Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)
+      float h = dht.readHumidity();
+      // Read temperature as Celsius (the default)
+      float t = dht.readTemperature();
+      // Read temperature as Fahrenheit (isFahrenheit = true)
+      float f = dht.readTemperature(true);
+      // Check if any reads failed and exit early (to try again).
+      if (isnan(h) || isnan(t) || isnan(f)) {
+        Serial.println("Failed to read from DHT sensor!");
+        return;
+      }
+
+      // Compute heat index in Fahrenheit (the default)
+      float hif = dht.computeHeatIndex(f, h);
+      // Compute heat index in Celsius (isFahreheit = false)
+      float hic = dht.computeHeatIndex(t, h, false);
+      Serial.print("Humidity: ");
+      Serial.print(h);
+      Serial.print(" %\t");
+      Serial.print("Temperature: ");
+      Serial.print(t);
+      Serial.print(" *C ");
+      Serial.print(f);
+      Serial.print(" *F\t");
+      Serial.print("    Heat index: ");
+      Serial.print(hic);
+      Serial.print(" *C ");
+      Serial.print(hif);
+      Serial.println(" *F");
+    }
+		</code></pre>
+	</figure>
+
+    <p>Within the first few lines of the code, it contains comments on defining your humidity sensor, whether it is the DHT11/22/21. Uncomment the line which specifies your sensor model by deleting the double slashes of your respective line. After the steps, you are ready to upload the code!</p>
 </section>
+
+<hr>
 
 <section>
     <h3>About the code</h3>
 
-    <p></p>
+    <p> The code starts off with the DHT library being declared. Then, it defines the pin its connected to, and the board. It also has some additional comments stating important points and instructions.</p>
 
-    <p></p>
+    <p>The next line which ​says <i>DHT dht(DHTPIN, DHTTYPE);</i>, this line of code initialises the sensor and makes sure it adjusts itself to work on multiple processors with various speeds; this is not needed anymore.</p>
 
-    <p></p>
+    <p>It the goes to the <i>void setup</i> phrase of the code where we begin serial communication from the sensor to the serial monitor. The sensor sends a command print <i>"DHTxx test!"</i> to the serial monitor, then it starts the sensor.</p>
+
+    <p>The code takes us to the <i>void loop</i> ​phrase now where we first wait 2 seconds before the readings of the humidity and temperature as well as the heat index gets processed. The serial monitor then prints the readings for us to read. The readings will be displayed into the serial monitor every two seconds. This sums up our project!</p>
 </section>
 
-<section>
-    <h3>Conclusion</h3>
+<hr>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+</div>

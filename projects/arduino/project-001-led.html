@@ -8,62 +8,105 @@ title: LEDs
 <section>
     <h3>Before starting the project...</h3>
 
-    <p class=credits></p>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-for-led-project_orig.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-for-led-project_orig.png" alt="">
+    </picture>
 
-    <p></p>
+    <p>Welcome to our first Arduino project where it's for mainly beginners and newbies to electronics. This is a simple LED project where modifications can be widely performed to change the output in time. An LED will be blinking rapidly and it's a great circuit for multiple LEDs. In a real life example, multiple LEDs can be used along with a modified code to suit the needs of attracting attention.</p>
+    <p>For this circuit, you will need to have the Arduino IDE on your computer and have the following:</p>
 
-    <p></p>
+    <ul>
+        <li>1 Arduino (the Keyestudio Uno is used in this example)</li>
+        <li>5 Jumper Wires (Male to Male)</li>
+        <li>2 10KΩ resistors</li>
+        <li>2 LEDs (any colour)</li>
+        <li>1 breadboard</li>
+        <li>1 USB Data Cable (depends on the Arduino)</li>
+    </ul>
 </section>
+
+<hr>
 
 <section>
     <h3>Mounting the circuit</h3>
 
-    <p></p>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-2-for-led-project.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-2-for-led-project-png" alt="LED circuit assembly diagram">
+    </picture>
+    <picture>
+        <source srcset="/assets/img/arduino/picture-3-for-led-project.webp" type="image/webp">
+        <img src="/assets/img/arduino/picture-3-for-led-project.png" alt="LED circuit assembly schematic">
+    </picture>
 
-    <p></p>
+    <p>Please refer to the schematics and diagram down above as you follow these steps:</p>
 
-    <p></p>
+    <ol>
+        <li>Before starting to mount the circuit, remove any power from your breadboard and Arduino for safety purposes.</li>
+        <li>First, start by connect a wire from your breadboard's negative rail to Arduino's ground pin.</li>
+        <li>Next, connect a wire at any column to digital pin 4 on your Arduino.</li>
+        <li>Two rows below that wire on your breadboard, connect a 10K ohm resistor 4 pins left to your resistor on the same row.</li>
+        <li>Above that, connect the anode of your a LED and connect the cathode to the next pin left.</li>
+        <li>Above the cathode, connect a wire linking the cathode of LED to the negative rail of your breadboard.</li>
+        <li>Right next to the ground linking wire, connect a wire going straight to digital pin 3 on your Arduino.</li>
+        <li>Two pins below the wire, connect your second 10K ohm resistor to the third pin left of it.</li>
+        <li>Above the resistor pin, connect an LED with the anode and place the cathode one pin right</li>
+        <li>Above the cathode, connect a wire directly to the negative rail of your breadboard.</li>
+    </ol>
 </section>
+
+<hr>
 
 <section>
 	<h3>The code</h3>
 
 	<p></p>
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+	<figure>
+	    <figcaption>Arduino LED Project Code</figcaption>
 
-		    <pre><code>
+	    <pre><code>
+    int ledpin1 = 3;
+    int ledpin2 = 4;
 
-			</code></pre>
-		</figure>
+    void setup() {
+      digitalWrite(ledpin1, HIGH);
+      digitalWrite(ledpin2, HIGH);
+      delay(200);
+      digitalWrite(ledpin1, LOW);
+      digitalWrite(ledpin2, LOW);
+      delay(200);
+    }
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
-
-		    <pre><code>
-
-			</code></pre>
-		</figure>
-
+    void loop() {
+      digitalWrite(ledpin1, HIGH);
+      delay(100);
+      digitalWrite(ledpin2, HIGH);
+      digitalWrite(ledpin1, LOW);
+      delay(100);
+      digitalWrite(ledpin2, LOW);
+    }
+		</code></pre>
+	</figure>
 </section>
+
+<hr>
 
 <section>
     <h3>About the code</h3>
 
-    <p></p>
+    <p>​This piece of code is very easy to understand as it's for absolute beginners.</p>
 
-    <p></p>
+    <p>The code starts off by defining the two variables for each of the LEDs to pins 3 and 4.</p>
 
-    <p></p>
+    <p>The next set of code describes the initial process of setting up the main program, this set of code is called the void setup. First, one LED is on, followed by the other, a delay of 200 milliseconds occurs, then both LEDs are off followed by another delay of 200 milliseconds.</p>
+
+    <p>The second code lines are called the void loop. They go on forever, until power is not given. It starts off with one LED going on, waiting for 100 milliseconds, then another LED is set to HIGH. After, the first LED is turned off completely followed by another delay of 100 milliseconds before finishing off with the second LED set to LOW. There you have it, the full project complete.</p>
 </section>
 
-<section>
-    <h3>Conclusion</h3>
+<hr>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+</div>

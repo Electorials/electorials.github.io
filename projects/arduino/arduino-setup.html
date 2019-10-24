@@ -6,64 +6,117 @@ title: Arduino Setup
 <h1>{{ page.title }}</h1>
 
 <section>
-    <h3>Before starting the project...</h3>
+    <h3>Arduino USB Connection</h3>
 
-    <p class=credits></p>
+    <p>The first step is to get a USB cable the same size as the connector port on your board, for example the Arduino Uno needs a Type-B USB data cable. The Arduino Due has two USB ports (Native USB and Programming) but needs a Micro-B USB data cable, plug your cable in either ports.</p>
 
-    <p></p>
+    <p>Connect the USB to your computer's USB port and make sure the green LED on your Arduino is blinking. Always check for any damages to the board before using the board in case they gave you a damaged board. If you don't have the right cable, you can power your board by an external power supply using a battery box with 6 AA batteries or 9 volts.</p>
 
-    <p></p>
+    <p>To spot fake/counterfeit boards, <a href="https://www.arduino.cc/en/Products/Counterfeit">click here</a>.</p>
+
+    <img src="/assets/img/arduino/ghh.png" alt="Two USB cables. One end of one cable with the Type B male end, and one end of the other cable with the micro B end">
 </section>
+
+<hr>
 
 <section>
-    <h3>Mounting the circuit</h3>
+    <h3>Arduino IDE (Integrated Development Environment)</h3>
 
-    <p></p>
+    <p>To upload and write codes to the Arduino, you need a software that can be special for the Arduino, so that is why they created it. The software can compile, upload and save the code to the sketchbook. The IDE can be downloaded onto computers programs like Windows, Mac and Linux.</p>
 
-    <p></p>
+    <p>In this example we will be using Windows. In order to download this software, this website can be used to download it, <a href="https://www.arduino.cc/en/Main/Software">which can be found here</a>.</p>
 
-    <p></p>
+    <p>In this example, I will be downloading The Arduino IDE to the Windows operating system. Other downloads may vary in instructions.</p>
+
+    <p>The first step is to download the software by clicking on Windows Installer. Next it will take you into a ZIP file. Extract it out and place it onto your computer. It can be a file in a folder or a file by itself. Click the file to open and click to the application to open. Once the IDE is open, plug in your Arduino board. Go to Tools > Board > and select your board. Then, go to Tools > Serial Port > and choose the port your board is plugged into. For any other boards, you will have to download drivers.</p>
+
+    <img src="/assets/img/arduino/picture-for-arduino-setup.png" alt="Arduino IDE open, with 'Arduino/Genuino Uno' selected under 'Board' under 'Tools'">
 </section>
+
+<hr>
+
+<!-- Will need to redo this whole section block for better instruction-telling.
+Steps are fragmented and it's best for usability to *not* have to click a link
+just to view images by putting the images or similar images in the same page
+where they are already reading the site with the Arduino set-up instructions. -->
+<section>
+    <h3>Setting up the Drivers</h3>
+
+    <p>The downloading of drivers is easy. This is the procedure if the IDE doesn't recognise the board you are using. For example, when you plug in the board, it fails the process by disconnecting.</p>
+
+    <p>Normally, Windows Installer will download drivers automatically when starting the problem. If the program does not identify the board, downloading drivers is essential for you getting started. Plug in your board before getting started:</p>
+
+    <ol>
+        <li>First, open up Control Panel on your computer by clicking the bottom-left Start Menu.
+        <img src="/assets/img/arduino/picture-3-for-arduino-setup.png" alt="Windows Control Panel"></li>
+        <li>When, in Control Panel, one subtitle is System & Security; click that then click only on System.
+        <img src="/assets/img/arduino/picture-4-for-arduino-setup.png" alt="Windows Control Panel, 'Device Manager' highlighted"></li>
+        <li>Once in System, go to Device Manager and from Device Manager, go to Ports (COM & LGT).
+        <img src="/assets/img/arduino/picture-5-for-arduino-setup.png" alt="Device Manager, with 'Ports (COM & LPT)' highlighted and expanded to show the Arduino Uno device"></li>
+        <li>From Ports, underneath should show Arduino Uno; click on Update Driver Software by right-clicking it. By clicking on that, it will take you through a process on the downloading automatically.
+        <img src="/assets/img/arduino/picture-6-for-arduino-setup.png" alt="Device Manager, with right-click menu on the Arduino Uno device"></li>
+        <li>Next, click "No, not this time" for one of the pages.</li>
+        <li>The other page you will get an option of Install from a list or specific location, click that.</li>
+        <li>When you get to a page where it asks you to select a specific file, browse your files and choose the one where all your hardware is located by selecting two options from that page; Search for the best driver in this location and Include this location in the search. Otherwise, select the file and continue.</li>
+        <li>The next page will inform you of the installation, just wait for a moment and it will finish.</li>
+    </ol>
+
+    <p>The process is finished and if you go to the IDE, it will identify the board now. By clicking this link, you will be able to look at the steps with pictures: https://www.arduino.cc/en/Guide/UnoDriversWindowsXP</p>
+
+    <p>This method is easier for downloading and installing drivers. It is way faster plus not so complicated.</p>
+
+    <p>Boards like the Arduino Yun, Uno, Duemilanove, Diecimila, Nano, Mega, Mega 2560, Mega ADK, Leonardo, Micro, Esplora, Mini, Ethernet, Fio, BT, Lilypad Arduino USB, Lilypad Arduino, Pro, Pro Mini, NG or order, Robot Control, Robot Motor, Gemma driver is already installed automatically; others need to download manually.</p>
+
+    <ol>
+        <li>First, go to Tools -> Boards -> Boards Manager.</li>
+        <li>You will reach a box listing all different boards but just search it up in the top-right search box.
+        <img src="/assets/img/arduino/picture-7-for-arduino-setup.png" alt="Arduino Boards Manager window"></li>
+        <li>Once you find the right board in the description of the box; click on that button that states Install. After the installation, the top right of the box will say INSTALLED in blue.</li>
+        <li>After installing, close a Boards Manager and restart the Arduino IDE.</li>
+        <li>Once fully started again, go to Tools -> Boards, and then there will be your board. Now choose your board and it will be all set up.
+        <img src="/assets/img/arduino/picture-for-arduino-setup_1.png" alt="Arduino window, with 'Tools > Board' opened"></li>
+    </ol>
+
+</section>
+
+<hr>
 
 <section>
-	<h3>The code</h3>
+    <h3>Testing the Board</h3>
 
-	<p></p>
+    <p>Once you have completed the above, you will have to test the board.</p>
+    <ol>
+        <li>Plug your Arduino board (I'm using a Keyestudio Uno) in your computer and open the Arduino IDE.</li>
+        <li>Then go to File -> Examples -> 01. Basics -> Blink. By clicking Blink, you will have a new sketch open.</li>
+        <li>Upload the sketch to the board. After uploading, the L (on-board LED) should be on for a second then off for a second.
+            <ul>
+                <li>If you reset, the board, the LED would blink rapidly then start the process again.</li>
+            </ul>
+        </li>
+    </ol> By this simple sketch, you now know the board is fully functional and operational. The explanation will be below the pictures. Look at the images below for the circuit uploaded onto the board:
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+    <img src="/assets/img/arduino/p140.png" alt="Arduino Keyestudio Uno with top-left orange LED on">
+    <img src="/assets/img/arduino/p142.png" alt="Arduino Keyestudio Uno with top-left orange LED off">
 
-		    <pre><code>
+    <p>After overseeing the circuit, we now have to look at this simple code.</p>
 
-			</code></pre>
-		</figure>
+    <p>It starts with comments by the creater and information which is all ignored by the IDE. Comments usually start with <code>//</code> or <code>/*</code>. Look out for these symbols because it is not part of the code.</p>
+    <p>The first line of code is <code>void setup</code>, codes must have two parts; <code>void setup</code> and <code>void loop</code>. The <code>void setup</code> is the parts which runs one time and <code>void loop</code> runs over and over again.</p>
 
-		<figure>
-		    <figcaption>{{ page.title }} Code</figcaption>
+    <p>In this particular code, under the <code>void setup</code> declares that the <code>pin 13 LED (L)</code> is going to send data out <code>(OUTPUT)</code> which is what makes the LED blink.</p>
 
-		    <pre><code>
+    <p>Now we know what we are controlling, but what are we going to do? The second part of this code is <code>void loop</code>. The LED blinks infinitely which is a loop. First, it turns the pin 13 on HIGH which is to power it which means it's on. <code>DigitalWrite</code> is just a function declaring what to do with the LED, then we code results we want.</p>
+    <p>The second line of <code>void loop</code> is a delay line which is like pausing music; it stops the circuit. We set the time to a second which is 1000 milliseconds, milliseconds is what we use when telling the IDE to stop the circuit.</p>
 
-			</code></pre>
-		</figure>
+    <p>After that line is another line like the first line but telling the IDE to put pin 13 to no power which means it's off.</p>
 
+    <p>Finally the code is complete. That section repeats until the Arduino board loses its power.</p>
+    <!-- In the original page, there is a "to edit." as the last paragraph.
+    This section underneath the images was meant to be edited later on, no? -->
 </section>
 
-<section>
-    <h3>About the code</h3>
+<hr>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
-
-<section>
-    <h3>Conclusion</h3>
-
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
+<div class="project-link">
+    <p>You have now completed the setup, but that's not it yet! <a href="/projects/arduino.html">Check out our other Arduino projects!</a></p>
+</div>
