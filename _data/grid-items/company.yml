@@ -1,3 +1,10 @@
+# When adding more pages to this folder, make sure to add in the information
+# as how they are here.
+# Make sure to create a new page in /reviews/company/ with the name
+# being *exactly* as it is in `link`, followed by the '.html' file extension
+# If text for `name` already has a " (double-quote) character, use the ' (single-
+# quote character) to surround the whole value of 'name'.
+
 - name: Seeed Studio Fusion
   link: /reviews/company/seeed-studio-fusion
 

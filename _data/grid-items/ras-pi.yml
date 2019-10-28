@@ -1,7 +1,14 @@
+# When adding more pages to this folder, make sure to add in the information
+# as how they are here.
+# Make sure to create a new page in /projects/raspberry-pi/ with the name
+# being *exactly* as it is in `link`, followed by the '.html' file extension
+# If text for `name` already has a " (double-quote) character, use the ' (single-
+# quote character) to surround the whole value of 'name'.
+
 - name: "Project 001: Dual Cooling Fan with the Thermal Tape Cooling Kit Setup"
   link: /projects/raspberry-pi/project-001-dual-cooling-fan-with-the-thermal-tape-cooling-kit-setup
 
-- name: "Projcet 002: RAM Copper Heatsink Setup"
+- name: "Project 002: RAM Copper Heatsink Setup"
   link: /projects/raspberry-pi/project-002-ram-copper-heatsink-setup
 
 - name: "Project 003: 5-inch HDMI Capacitive Touch Screen Display Setup"

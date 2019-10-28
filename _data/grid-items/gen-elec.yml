@@ -1,3 +1,10 @@
+# When adding more pages to this folder, make sure to add in the information
+# as how they are here.
+# Make sure to create a new page in /projects/general-electronics/ with the name
+# being *exactly* as it is in `link`, followed by the '.html' file extension
+# If text for `name` already has a " (double-quote) character, use the ' (single-
+# quote character) to surround the whole value of 'name'.
+
 - name: "Project 001: DC to DC Automatic Boost Buck Converter 5 - 32V to 1.25 - 20V 5A Setup"
   link: /projects/general-electronics/project-001-dc-to-dc-automatic-boost-buck-converter-5-32v-to-1.25-20v-5a-setup
 
@@ -21,3 +28,9 @@
 
 - name: "Project 008: XY-MUP USB DC-DC Buck Boost Power Supply Module Tutorial"
   link: /projects/general-electronics/project-008-xy-mup-usb-dc-dc-buck-boost-power-supply-module-tutorial
+
+- name: "Project 009: Discovering OR Logic with the CD4011BE"
+  link: /projects/general-electronics/project-009-discovering-or-logic-with-the-cd4011be
+
+- name: "Project 010: SK-UT USB Multi-Function Meter Setup"
+  link: /projects/general-electronics/project-010-sk-ut-usb-multi-function-meter-setup
