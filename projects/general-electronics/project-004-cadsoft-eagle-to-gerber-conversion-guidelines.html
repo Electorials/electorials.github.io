@@ -6,41 +6,98 @@ title: Cadsoft Eagle (.brd) to Gerber Conversion Guidelines
 <h1>{{ page.title }}</h1>
 
 <section>
-    <h3>Introduction</h3>
+    <h3>Introduction and Layer Conversion Rules (Syntax)</h3>
 
-    <p></p>
+    <p>The Eurocircuits preferred input format is still Gerber (RS-274X). Nowadays, we also offer the possibility to upload Eagle CAD data (.brd files) which we convert internally to Gerber before starting the normal flow.</p>
 
-    <p></p>
+    <p>Be advised that this conversion is automated and based on the Eagle layer names and functions. In case you have designed the board while respecting the normal Eagle layers, the conversion should lead to a correct printed circuit board. In case you have used layers for other functions then the ones prescribed in the Eagle manual, the conversion could lead to a non-functional board.</p>
 
-    <p></p>
+    <table>
+        <caption>Layer conversion rules (syntax):</caption>
+        <tr>
+            <th colspan="2">The layer function (.file extension) consists of Eagle layer(s): Eagle layer number & function</th>
+        </tr>
+        <tr>
+            <th>Solder stop component side (.stc):</th>
+            <td>20 Dimension layers + 29 Stop layers</td>
+        </tr>
+        <tr>
+            <th>Silkscreen component side (.plc):</th>
+            <td>20 Dimension layers + 21 Place layers + 25 Name layers</td>
+        </tr>
+        <tr>
+            <th>Component side (.cmp):</th>
+            <td>1 Top layer + 17 Pad layers + 18 Via layers + 20 Dimension layers</td>
+        </tr>
+        <tr>
+            <th>Inner layers (.lox):</th>
+            <td>x Inner layers + 17 Pads layers + 18 Via layers + 20 Dimension layers
+</td>
+        </tr>
+        <tr>
+            <th>Solder side (.sol):</th>
+            <td>16 Bot layers + 17 Pads layers + 18 Via layers + 20 Dimension layers</td>
+        </tr>
+        <tr>
+            <th>Solder stop solder side (.sts):</th>
+            <td>30 Stop layers + 20 Dimension layers</td>
+        </tr>
+        <tr>
+            <th>Silkscreen solder side (.pls):</th>
+            <td>22 Place layers + 26 Name layers + 20 Dimension layers</td>
+        </tr>
+        <tr>
+            <th>Milling (.miling):</th>
+            <td>46 Milling layers + 47 Measures layers + 20 Dimension layers</td>
+        </tr>
+        <tr>
+            <th>Excellon drill (.drd):</th>
+            <td>44 Drill layers + 45 Hole layers</td>
+        </tr>
+        <tr>
+            <th>Cream frame component side(.pmc):</th>
+            <td>31 Cream layers + 20 Dimension layers</td>
+        </tr>
+        <tr>
+            <th>Cream frame solder side (.pms):</th>
+            <td>32 Cream layers + 20 Dimension layers</td>
+        </tr>
+    </table>
+
+    <p>The conversion is fully automated, and because of this, Eurocircuits cannot take any customer specific requests into consideration. If the above rules don’t suit your needs, simply convert the Eagle CAD data (.brd) project yourself into Gerber, and supply the set of Gerber files for further processing.</p>
 </section>
+
+<hr>
 
 <section>
-    <h3></h3>
+    <h3>How to Generate Gerber and Excellon Files in Eagle?</h3>
 
-    <p></p>
+    <p>Generating Gerber and Excellon files in Eagle is one easy process. Simply follow these steps:</p>
 
-    <p></p>
+    <ol>
+        <li>Open the CAM Processor</li>
+        <li>Select File -> Open for Job</li>
+        <li>In the window that now opens, select the correct .cam file. In this case, "gerb274x.cam" (located in the Eagle subdirectory .cam). For a 4-layer PCB, select "gerb274x-4layer.cam".</li>
+        <li>The job opens itself in the CAM processor window. In the right-hand panel, the necessary items are already selected. You do not need to do anything here.</li>
+        <li>Activate the dimension of every layer by clicking on it. This shows the outline of the PCB.</li>
+        <li>The tick box next to Mirror needs to be un-ticked each time.</li>
+        <li>The final step is carrying out the job. This is simply done by clicking the button “Process Job”.</li>
+    </ol>
 
-    <p></p>
+    <p>The CAM Processor places the Gerber files in the folder of your opened project. There are quite a few files there (six for a two-layer board). To create an Excellon file that contains the information for drilling the holes, you select the excellon.cam file when opening the .cam-file (steps 2 and 3). You then click “Process Job” and the Excellon file will be generated. You now simply combine all these files into a single zip file and upload it via the Eurocircuits website.</p>
+
+
+    <!-- Remember to remove promotion info when promotion ends -->
+    <p>For more information on PCB manufacturing, assembly or further projects, please visit <a href="https://www.pcbgogo.com">PCBGOGO's website</a>. Furthermore, <a href="https://www.pcbgogo.com/?code=y">they are having a limited time promotion for this year's Thanksgiving with code <code>y</code></a>, so be sure to check in with their services and products for exclusive offers.</p>
+
+    <picture>
+        <source srcset="/assets/img/gen-elec/tim-20181115105647_1.webp" type="image/webp">
+        <img src="/assets/img/gen-elec/tim-20181115105647_1.png" alt="">
+    </picture>
 </section>
 
-<section>
-    <h3></h3>
+<hr>
 
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
-
-<section>
-    <h3>Conclusion</h3>
-
-    <p></p>
-
-    <p></p>
-
-    <p></p>
-</section>
+<div class="contact">
+    <p>Enjoy! Feel free to <a href="/contact.html">contact us</a> for any inquiries!</p>
+</div>
