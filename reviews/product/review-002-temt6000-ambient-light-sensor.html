@@ -3,7 +3,15 @@ layout: default
 title: TEMT6000 Ambient Light Sensor
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="banner">
+    <h1>{{ page.title }}</h1>
+    <p>Module has been kindly sponsored by <a href="http://www.icstation.com/index.php?aid=294">ICStation.com</a></p>
+
+    <picture>
+        <source srcset="/assets/img/product/11480-6462.webp" type="image/webp">
+        <img src="/assets/img/product/11480-6462.jpg" alt="TEMT6000 Ambient Light Sensor">
+    </picture>
+</div>
 
 <section>
     <h3>Product Specifications</h3>
@@ -13,32 +21,56 @@ title: TEMT6000 Ambient Light Sensor
 
 		<tr>
 			<th>Type:</th>
-			<td></td>
+			<td>Ambient Light Sensor</td>
 		</tr>
 		<tr>
 			<th>Architecture:</th>
-			<td></td>
+			<td>For Arduino</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Communication Interface:</th>
+			<td>Analog Voltage</td>
 		</tr>
+        <tr>
+            <th>Wavelength:</th>
+            <td>570nm</td>
+        </tr>
+        <tr>
+            <th>Detection Angle:</th>
+            <td>±60°</td>
+        </tr>
+        <tr>
+            <th>Illumination Range:</th>
+            <td>1 – 1000 lux</td>
+        </tr>
+        <tr>
+            <th>Operating Temperature:</th>
+            <td>-40°C – 85°C</td>
+        </tr>
+        <tr>
+            <th>Maximum Sensitivity:</th>
+            <td>570nm</td>
+        </tr>
+        <tr>
+            <th>Output Signal:</th>
+            <td>Analog</td>
+        </tr>
 	</table>
 
 	<table>
 		<caption>Power</caption>
 
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Operating Voltage:</th>
+			<td>+3.3 volts – +5 volts</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Output Current:</th>
+			<td>20mA</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+    		<th>Collector - Emitter Voltage:</th>
+			<td>+1.5/+6 volts</td>
 		</tr>
 	</table>
 
@@ -47,55 +79,53 @@ title: TEMT6000 Ambient Light Sensor
 
 		<tr>
 			<th>Weight:</th>
-			<td></td>
+			<td>1 g</td>
 		</tr>
 		<tr>
 			<th>Size (L × W × H):</th>
-			<td>××m</td>
-		</tr>
-		<tr>
-			<th></th>
-			<td></td>
+			<td>20mm × 8mm × 7mm</td>
 		</tr>
 	</table>
 </section>
+
+<hr>
 
 <section>
     <h3>Pinout</h3>
 
     <table>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>5v</th>
+			<td>VCC (+)</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>OUT</th>
+			<td>Signal</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>GND</th>
+			<td>GND (-)</td>
 		</tr>
 	</table>
 </section>
 
+<hr>
+
 <section>
     <h3>Product Review</h3>
 
-    <p></p>
+    <p>This product is easily one of my favourites to add to a project due to these reasons:</p>
 
-    <p></p>
-
-    <p></p>
+    <ul>
+        <li>It's small and compact, so it can fit into small enclosures.</li>
+        <li>It's really accurate and can be used for a variety of projects like backlights in mobile phones.</li>
+        <li>It has pre-soldered pins, for convenience.</li>
+        <li>The software interface of this product is simple, therefore, the code used is very basic.</li>
+        <li>The hardware is simple, making it not so complex since it only has three pins (Signal, VCC & GND).</li>
+    </ul>
 </section>
 
-<section>
-    <h3>Datasheet</h3>
-
-	<p></p>
-
-    <p><a href=>Download File</a></p>
-</section>
+<hr>
 
 <section>
 <h3>Sample code</h3>
@@ -103,39 +133,53 @@ title: TEMT6000 Ambient Light Sensor
 <p></p>
 
 	<figure>
-	    <figcaption>{{ page.title }} Code</figcaption>
+	    <figcaption>Arduino {{ page.title }} Sample Code</figcaption>
 
 	    <pre><code>
-			<!-- Code goes here. Make sure to delete this comment afterwards. -->
+    int temt6000Pin = 0;
+    void setup() {
+        Serial.begin(9600);
+    }
+    void loop() {
+        int value = analogRead(temt6000Pin);
+        Serial.println(value);
+        delay(200);
+    }
 		</code></pre>
 	</figure>
-
 </section>
 
+<hr>
+
 <section>
-    <h3>Product Page</h3>
+    <h3>ICStation Product Page</h3>
 
-    <img src=>
+    <picture>
+        <source srcset="/assets/img/product/screen-shot-2018-02-05-at-3-38-57-pm_orig.webp" type="image/webp">
+        <img src="/assets/img/product/screen-shot-2018-02-05-at-3-38-57-pm_orig.png" alt="">
+    </picture>
 
-    <p>Check out the product <a href=>here</a>: <a href=>link</a></p>
-
-    <p></p>
+    <p>Check out the product <a href="http://www.icstation.com/product_info.php?aid=294&products_id=11480">here</a>: <a href="http://www.icstation.com/product_info.php?aid=294&products_id=11480">http://www.icstation.com/product_info.php?aid=294&products_id=11480</a></p>
 </section>
 
 <hr>
 
 <div class=discount>
-	<p></p>
+    <p>For purchases from ICStation, use this code for a discount:</p>
+    <p class="code">Simics</p>
+    <p>Discount amount: 15% off<br>
+    Maximum use: 1 per user<br>
+    Amount Limit: 300</p>
 </div>
 
 <hr>
 
 <div class=project-link>
-	<p>Be sure to check out the <a href=>[relevant project page name text] here</a>!</p>
+	<p>Be sure to check out the <a href="/projects/arduino/project-009-temt6000-ambient-light-sensor">Arduino TEMT6000 Ambient Light Sensor Project here</a>!</p>
 </div>
 
 <hr>
 
 <div class=contact>
-	<p>Enjoy! Feel free to <a href=/contact>contact us<a> for any inquiries!</p>
+	<p>Enjoy! Feel free to <a href="/contact">contact us<a> for any inquiries!</p>
 </div>

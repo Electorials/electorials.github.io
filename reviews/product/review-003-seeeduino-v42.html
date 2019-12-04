@@ -3,7 +3,14 @@ layout: default
 title: Seeeduino v4.2
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="banner">
+    <h1>{{ page.title }}</h1>
+    <p>This module has been kindly sponsored by <a href="https://www.seeedstudio.com/">Seeedstudio.com</a></p>
+    <picture>
+        <source srcset="/assets/img/product/seeeduino-v4-2.webp" type="image/webp">
+        <img src="/assets/img/product/seeeduino-v4-2.jpg" alt="Seeeduino v4.2">
+    </picture>
+</div>
 
 <section>
     <h3>Product Specifications</h3>
@@ -13,33 +20,53 @@ title: Seeeduino v4.2
 
 		<tr>
 			<th>Type:</th>
-			<td></td>
+			<td>Development Board</td>
 		</tr>
 		<tr>
 			<th>Architecture:</th>
-			<td></td>
+			<td>For Arduino</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Software</th>
+			<td>Arduino IDE</td>
 		</tr>
+        <tr>
+            <th>Flash Memory:</th>
+            <td>32KB</td>
+        </tr>
+        <tr>
+            <th>RAM:</th>
+            <td>2KB</td>
+        </tr>
+        <tr>
+            <th>EEPROM:</th>
+            <td>1KB</td>
+        </tr>
+        <tr>
+            <th>Clock Speed:</th>
+            <td>16MHz</td>
+        </tr>
 	</table>
 
 	<table>
 		<caption>Power</caption>
 
 		<tr>
-			<th></th>
-			<td></td>
+			<th>DC Jack Input Voltage:</th>
+			<td>+7 – 15 volts</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Output Current (5v):</th>
+			<td>500mA max (with microUSB); 2A max (with DC Jack Power)</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Output Current (3.3v):</th>
+			<td>500mA (from both power sources)</td>
 		</tr>
+        <tr>
+            <th>DC Current per I/O pin:</th>
+            <td>40mA</td>
+        </tr>
 	</table>
 
 	<table>
@@ -47,55 +74,64 @@ title: Seeeduino v4.2
 
 		<tr>
 			<th>Weight:</th>
-			<td></td>
+			<td>26g</td>
 		</tr>
 		<tr>
 			<th>Size (L × W × H):</th>
-			<td>××m</td>
-		</tr>
-		<tr>
-			<th></th>
-			<td></td>
+			<td>68.8mm × 53.4mm × 11.6mm</td>
 		</tr>
 	</table>
+
+    <p>Hardware Features</p>
+
+    <ul>
+        <li>Fully compatible with Arduino sensors and modules.</li>
+        <li>Integrated with an ATmega328P microcontroller.</li>
+        <li>Features 14 Digital I/O Pins (6 PWM outputs).</li>
+        <li>Features 6 Analog Inputs.</li>
+        <li>Features an ISP Header.</li>
+        <li>Is Arduino Uno R3 Shield Compatible.</li>
+        <li>Uses a micro-USB programming input and power supply.</li>
+        <li>Has 3 On-board Grove connectors.</li>
+        <li>Features a 3.3v/5V system operation power switch.</li>
+        <li>Consists of additional pads aligned to 0.1” grid.</li>
+    </ul>
 </section>
+
+<hr>
 
 <section>
     <h3>Pinout</h3>
 
-    <table>
-		<tr>
-			<th></th>
-			<td></td>
-		</tr>
-		<tr>
-			<th></th>
-			<td></td>
-		</tr>
-		<tr>
-			<th></th>
-			<td></td>
-		</tr>
-	</table>
+    <picture>
+        <source srcset="/assets/img/product/seeeduino_v4.2_pinout_reference.webp" type="image/webp">
+        <img src="/assets/img/product/seeeduino_v4.2_pinout_reference.png" alt="Pinout of Seeeduino v4.2">
+    </picture>
 </section>
+
+<hr>
 
 <section>
     <h3>Product Review</h3>
 
-    <p></p>
+    <p>Throughout my test of this development board, I found out that there are some very unique touches to this module which is unlike to any other development board including:</p>
 
-    <p></p>
+    <ul>
+        <li>A very uncomplicated and simple setup with an easy way to program.</li>
+        <li>There're straight-forward pinout markings and clearly marked labels.</li>
+        <li>There're empty pins on the PCB for female pin headers to be added as well, give capability to multiple types of jumper wires.</li>
+        <li>This board has 3 on-board Grove connectors, so it is compatible with all Grove inputs and outputs.</li>
+        <li>This board has pins for direct serial communication.</li>
+        <li>It is based on surface-mount components mostly.</li>
+        <li>There is a power operation switch, switching the board between +3.3 volts and +5 volts to cater for different sensors and modules.</li>
+        <li>It includes solder pads at the back of the PCB for additional, external connections.</li>
+        <li>There is not a need for any installation of drivers this microcontroller for programming on the Mac Operating Systems.</li>
+    </ul>
 
-    <p></p>
+    <p>​There are aspects that needs to be improved such as the roughness on the sides of the PCB, and, the DC input jack isn't properly aligned with the board.</p>
 </section>
 
-<section>
-    <h3>Datasheet</h3>
-
-	<p></p>
-
-    <p><a href=>Download File</a></p>
-</section>
+<hr>
 
 <section>
 <h3>Sample code</h3>
@@ -103,35 +139,39 @@ title: Seeeduino v4.2
 <p></p>
 
 	<figure>
-	    <figcaption>{{ page.title }} Code</figcaption>
+	    <figcaption>Arduino {{ page.title }}  Sample Code</figcaption>
 
 	    <pre><code>
-			<!-- Code goes here. Make sure to delete this comment afterwards. -->
+    void setup() {
+        pinMode(LED_BUILTIN, OUTPUT);
+    }
+    void loop() {
+        digitalWrite(LED_BUILTIN, HIGH);
+        delay(1000);
+        digitalWrite(LED_BUILTIN, LOW);
+        delay(1000);
+    }
 		</code></pre>
 	</figure>
-
-</section>
-
-<section>
-    <h3>Product Page</h3>
-
-    <img src=>
-
-    <p>Check out the product <a href=>here</a>: <a href=>link</a></p>
-
-    <p></p>
 </section>
 
 <hr>
 
-<div class=discount>
-	<p></p>
-</div>
+<section>
+    <h3>Seeedstudio Product Page</h3>
+
+    <picture>
+        <source srcset="/assets/img/product/screen-shot-2017-10-13-at-5-12-35-pm_orig.webp" type="image/webp">
+        <img src="/assets/img/product/screen-shot-2017-10-13-at-5-12-35-pm_orig.png" alt="">
+    </picture>
+
+    <p>Check out the product <a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">here</a>: <a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html</a></p>
+</section>
 
 <hr>
 
 <div class=project-link>
-	<p>Be sure to check out the <a href=>[relevant project page name text] here</a>!</p>
+	<p>Be sure to check out the <a href="/projects/arduino/project-008-seeeduino-v42-setup">Seeeduino v4.2 Setup here</a>!</p>
 </div>
 
 <hr>

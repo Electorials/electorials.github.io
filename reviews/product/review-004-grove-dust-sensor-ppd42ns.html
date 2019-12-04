@@ -3,7 +3,14 @@ layout: default
 title: Grove - Dust Sensor (PPD42NS)
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="banner">
+    <h1>{{ page.title }}</h1>
+    <p>This module has been kindly sponsored by <a href="https://www.seeedstudio.com/">Seeedstudion.com</a></p>
+    <picture>
+        <source srcset="/assets/img/product/dust-sensor-ppd42ns.webp" type="image/webp">
+        <img src="/assets/img/product/dust-sensor-ppd42ns.jpg" alt="Dust Sensor (PPD42NS)">
+    </picture>
+</div>
 
 <section>
     <h3>Product Specifications</h3>
@@ -13,32 +20,52 @@ title: Grove - Dust Sensor (PPD42NS)
 
 		<tr>
 			<th>Type:</th>
-			<td></td>
+			<td>Sensor</td>
 		</tr>
 		<tr>
 			<th>Architecture:</th>
-			<td></td>
+			<td>For Arduino</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Output Signal:</th>
+			<td>Digital (Negative Logic and PWM)</td>
 		</tr>
+        <tr>
+            <th>Detectable Range of Cencentration:</th>
+            <td>0 ~ 280000 pcs/litre (0 ~ 8000 pcs/0.01cf CF = 283 ml)</td>
+        </tr>
+        <tr>
+            <th>Detectable particle diameter:</th>
+            <td>> 1µm</td>
+        </tr>
+        <tr>
+            <th>Operating Humidity Range:</th>
+            <td>95% relative humidity or less</td>
+        </tr>
+        <tr>
+            <th>Operating Temperature:</th>
+            <td>0°C ~ 45°C</td>
+        </tr>
+        <tr>
+            <th>Stabilisation time:</th>
+            <td>1 minute after powered (3 minutes for the first time)</td>
+        </tr>
 	</table>
 
 	<table>
 		<caption>Power</caption>
 
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Operating Voltage:</th>
+			<td>+4.75 ~ +5.75 volts</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Operating current:</th>
+			<td>90mA</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Output Signal Voltage:</th>
+			<td>High: > +4 volts – +4.5 volts (For newer models);<br>Low: > 0.7 volts</td>
 		</tr>
 	</table>
 
@@ -47,34 +74,36 @@ title: Grove - Dust Sensor (PPD42NS)
 
 		<tr>
 			<th>Weight:</th>
-			<td></td>
+			<td>25g</td>
 		</tr>
 		<tr>
-			<th>Size (L × W × H):</th>
-			<td>××m</td>
+			<th>Wire Length:</th>
+			<td>21 cm</td>
 		</tr>
-		<tr>
-			<th></th>
-			<td></td>
-		</tr>
+        <tr>
+            <th>Size (L × W × H):</th>
+            <td>58.7 cm × 46 cm × 19 cm</td>
+        </tr>
 	</table>
 </section>
+
+<hr>
 
 <section>
     <h3>Pinout</h3>
 
     <table>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Black Wire:</th>
+			<td>GND (-)</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Red Wire:</th>
+			<td>VCC (+)</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th>Yellow Wire:</th>
+			<td>Signal</td>
 		</tr>
 	</table>
 </section>
@@ -82,20 +111,21 @@ title: Grove - Dust Sensor (PPD42NS)
 <section>
     <h3>Product Review</h3>
 
-    <p></p>
+    <p>This one-of-a-kind sensor provides an excellent alternative to many sensors involving air quality detection, because it includes functions and attributes such as:</p>
 
-    <p></p>
+    <ul>
+        <li>The high sensitivity towards various dust conditions, which is followed by its quick response time for the sensor's serial communication to a microcontroller.</li>
+        <li>The technology involved in this sensor, as this sensor includes: an Infrared LED, a set of lens, a photodiode detector and electromagnetic shielding.</li>
+        <li>The compactness and size of this sensor, especially for its dust sensing function. This sensor could easily fit into an air quality monitor box or any other DIY casing.</li>
+        <li>The simple software involved with coding this sensor as it is simple, with sampling included, to convert raw values into a specific unit of measurement (pcs/0.01cf).</li>
+        <li>The uncomplicated hardware framework to prepare this sensor for use, because of the three wires to a microcontroller (VCC, GND and Signal). This is definitely a starting sensor for a beginner.</li>
+        <li>The many resources involved when purchasing this sensor, as the source code and any additional information (Precautions, Project Ideas, Readings vs Time, etc.) are all given in the Wiki page.</li>
+    </ul>
 
     <p></p>
 </section>
 
-<section>
-    <h3>Datasheet</h3>
-
-	<p></p>
-
-    <p><a href=>Download File</a></p>
-</section>
+<hr>
 
 <section>
 <h3>Sample code</h3>
@@ -103,39 +133,64 @@ title: Grove - Dust Sensor (PPD42NS)
 <p></p>
 
 	<figure>
-	    <figcaption>{{ page.title }} Code</figcaption>
+	    <figcaption>Arduino {{ page.title }} Sample Code</figcaption>
 
 	    <pre><code>
-			<!-- Code goes here. Make sure to delete this comment afterwards. -->
+    int pin = 8;
+    unsigned long duration;
+    unsigned long starttime;
+    unsigned long sampletime_ms = 2000;//sampe 30s&nbsp;;
+    unsigned long lowpulseoccupancy = 0;
+    float ratio = 0;
+    float concentration = 0;
+    void setup() {
+        Serial.begin(9600);
+        pinMode(8,INPUT);
+        starttime = millis();//get the current time;
+    }
+    void loop() {
+        duration = pulseIn(pin, LOW);
+        lowpulseoccupancy = lowpulseoccupancy+duration;
+        if ((millis()-starttime) >= sampletime_ms)//if the sampel time = = 30s
+        {
+            ratio = lowpulseoccupancy/(sampletime_ms*10.0);  // Integer percentage 0=&gt;100
+            concentration = 1.1*pow(ratio,3)-3.8*pow(ratio,2)+520*ratio+0.62; // using spec sheet curve
+            Serial.print("Concentration = ");
+            Serial.print(concentration);
+            Serial.println(" pcs/0.01cf");
+            Serial.println("\n");
+            lowpulseoccupancy = 0;
+            starttime = millis();
+        }
+    }
 		</code></pre>
 	</figure>
 
 </section>
 
+<hr>
+
 <section>
-    <h3>Product Page</h3>
+    <h3>Seeedstudio Product Page</h3>
 
-    <img src=>
+    <picture>
+        <source srcset="/assets/img/product/screen-shot-2018-01-20-at-8-11-24-pm_orig.webp" type="image/webp">
+        <img src="/assets/img/product/screen-shot-2018-01-20-at-8-11-24-pm_orig.png" alt="">
+    </picture>
 
-    <p>Check out the product <a href=>here</a>: <a href=>link</a></p>
+    <p>Check out the product <a href="​https://www.seeedstudio.com/Grove-Dust-Sensor%EF%BC%88PPD42NS%EF%BC%89-p-1050.html">here</a>: <a href="​https://www.seeedstudio.com/Grove-Dust-Sensor%EF%BC%88PPD42NS%EF%BC%89-p-1050.html">​https://www.seeedstudio.com/Grove-Dust-Sensor%EF%BC%88PPD42NS%EF%BC%89-p-1050.html</a></p>
 
     <p></p>
 </section>
 
 <hr>
 
-<div class=discount>
-	<p></p>
-</div>
-
-<hr>
-
 <div class=project-link>
-	<p>Be sure to check out the <a href=>[relevant project page name text] here</a>!</p>
+	<p>Be sure to check out the <a href="/projects/arduino/project-010-grove-dust-sensor-ppd42ns">Arduino Grove - Dust Sensor (PPD42NS) Project here</a>!</p>
 </div>
 
 <hr>
 
 <div class=contact>
-	<p>Enjoy! Feel free to <a href=/contact>contact us<a> for any inquiries!</p>
+	<p>Enjoy! Feel free to <a href="/contact">contact us<a> for any inquiries!</p>
 </div>
