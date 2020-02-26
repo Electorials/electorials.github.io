@@ -9,6 +9,7 @@
 /***** Globals *****/
 * {
     line-height: 1.8em;
+    font-family: sans-serif;
 }
 
 div {
@@ -31,13 +32,13 @@ nav {
     text-align: center;
 }
 
-#logo {
+.logo {
     float: left;
     margin: 0 1em;
 }
 
-#logo,
-#logo img {
+.logo,
+.logo img {
     max-height: var(--nav-height);
     display: inline;
 }
@@ -64,7 +65,7 @@ nav {
     font-size: .875em;
     width: var(--item-width);
     transform: translateX(calc((100% - var(--item-width)) / 2 ));
-    line-height: 1.6em;
+    line-height: 1.6rem;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
 1180px or somewhere wider. */
@@ -107,31 +108,57 @@ nav ul.dropdown li.menu-item {
 /** Dropdown menu rules end **/
 
 /***** Main content rules *****/
+
+
 main {
-    /* max-width: 38rem; */
-    /* width: 100%; */
-    padding: /*var(--nav-height)*/ 1.75em 0rem 2rem;
-    margin: auto;
-    /* margin-top: var(--nav-height); */
+    padding: calc(var(--nav-height) - 2em) 0 0;
 }
 
-main div > * {
+/* .content > *,
+.content > div > * {
     margin: auto 2rem;
+} */
+
+.content {
+    margin: 2rem auto 0;
 }
 
-#hero {
+
+/*** Banner/hero rules ***/
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* These three above centre all content at the exact middle of the X and Y axes */
+
+    flex-direction: column;
+    /* Any siblings under .banner will vertically stack rather than sit next to one another */
+
+    padding: 5.5em;
+    margin: auto;
+
+    /* background-image: url(https://electorials.com/uploads/1/0/1/7/101767294/background-images/944554335.png); */
+    /* This won't be implemented, as it's a sort of proof of concept.
+    The general markup will be this for all pages with the hero/banner section:
+    <div class="banner" style="background-image: url({{ page.banner-image }});"><h1>Page Title</h1></div>
+    {{ page.background-image }} will be defined in each page's front matter variables.
+    The background-image property in the style attribute might be something like this:
+    background-image: url(/assets/img/arduino/banners/{{ page.banner-image }})
+    Might have to use Modernizr.js for using WebP images as the background, while also using JPEG and PNG images on older browsers (https://css-tricks.com/using-webp-images/) */
+}
+
+.hero {
     text-align: center;
     width: 100vw;
     margin: 0;
     min-height: 35em;
 
-    background-image: url(/assets/img/banners/home-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
 }
 
-#hero #hero-text {
+.hero-text {
     margin-top: 2rem;
     display: inline-block;
     font-size: 1.5em;
@@ -140,29 +167,101 @@ main div > * {
     padding: 1.25rem 1.25rem 3.75rem;
 }
 
-#hero h1, #hero h2 {
+.hero h1, .hero h2 {
     text-transform: uppercase;
     font-family: 'Patua One', serif;
     color: rgb(177, 245, 155);
 }
 
-#hero h2 {
+.hero h2 {
     margin: 0 4em;
 }
 
-#hero p {
+.hero p {
     font-family: 'Open Sans', sans-serif;
     margin-top: 1.5em;
     color: rgb(255, 215, 191);
 }
 
-#quote {
-    margin: 2rem;
+/*** Section rules ***/
+section {
+    padding: 2rem 4rem;
 }
 
-/* #introduction {
-    margin: auto 2rem;
-} */
+/* Targets all immediate children of the section tags.
+Adds equal top and bottom margins within each coloured section for some nice
+uniformity. */
+section > * {
+    margin: 1.125rem 0;
+}
+
+section h2 {
+    text-align: center;
+    /* margin-bottom: 1.5rem; */
+    font-size: 2rem;
+}
+
+section h4 {
+    font-size: 1.75rem;
+}
+
+section p,
+section ul li,
+section ol li {
+    font-size: 1.25rem;
+}
+
+section li {
+    margin: 0 1rem;
+}
+
+.quote blockquote {
+    font-size: 1.5rem;
+}
+
+.quote p {
+    text-align: right;
+    font-size: calc(15rem / 9);
+    color: #8d2424;
+    font-weight: 700;
+}
+
+/* Targets <ul> blocks with links in their <li> tags, to give them flex rules */
+.links {
+    list-style-type: none;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100%;
+    width: 100%;
+    text-align: center; /*Centres all text in the <a> tags*/
+}
+
+.links li {
+    margin: 1rem;
+    text-align: center;
+}
+
+.links a {
+    padding: 0.75rem 1.25rem;
+    margin: 0 5rem;
+
+    border: .25rem solid #5a5f63;
+    background: white;
+    color: #5a5f63;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /***** Footer content rules *****/
 footer {
@@ -173,6 +272,10 @@ footer {
     text-align: center;
 
     border-top: 1px solid red;
+}
+
+footer > div {
+    margin: 2rem auto;
 }
 
 footer hr {

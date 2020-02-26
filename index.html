@@ -5,8 +5,8 @@ call-to-action: Electronics Tutorials, Projects, and Reviews
 blurb: Electorials is a free website for the electronics community hobbyist.
 ---
 
-<header id="hero">
-    <div id="hero-text">
+<header class="hero" style="background-image: url(/assets/img/banners/home-hero.jpg)">
+    <div class="hero-text">
         <h1>Electorials</h1>
         <h2>{{ page.call-to-action }}</h2>
         <p>{{ page.blurb }}</p>
@@ -15,25 +15,151 @@ blurb: Electorials is a free website for the electronics community hobbyist.
 
 <!--
 Consider putting a small sticky banner detailing the summer sale, or any similar announcement. The banner can be similar to the sponsors that Troy Hunt has on his website.
-<div id="banggood">
-    <h2>Banggood Summer Sale is coming with 80% OFF</h2>
-</div>
+<section class="NextPCB">
+    <h3>$5 Worth of PCBs for <span>FREE</span></h3>
+
+    <p>Sign up and get $5 worth of PCBs for free from NextPCB here!</p>
+</section>
 
 --- button markup for "More Information", or markup in banner. ---
 -->
 
-<div id="quote">
+<!-- Quote; light yellow -->
+<section class="quote" style="background-color: #fcfbcc;">
+    <h2>Our Quote</h2>
+
     <blockquote>
         "Do it with passion, or not at all."
     </blockquote>
-    <p>— The Electorials Team</p>
-</div>
 
-<div id="introduction">
+    <p>— The Electorials Team</p>
+</section>
+
+<!-- Introduction; light blue -->
+<section class="introduction" style="background-color: #d7fcff;">
 <!-- Might be best to put this in a separate about.html page. -->
-    <h3>An introduction to our website</h3>
+    <h2>An introduction to our website</h2>
 
     <p>Electorials was established on the 2nd of March, 2017 as a hobby. Our goal was to provide an easy, convenient project site for the Arduino community to share. We aim to establish as a one-stop destination for any of your electronic tutorial needs over time.<br>
     Our site is a non-profit making organisation which relies on free web hosting and components are sponsored from time to time for our unbiased review. Feel free to share our projects, tutorials and reviews. We welcome any free sponsors, comments and suggestions in order for us to improve the site content.<br>
     Contact us by filling up the contact form. We will endeavour to reply back as soon as possible as we hope to make the best Arduino community site it can be.</p>
-</div>
+</section>
+
+<!-- Shoutouts; light purple -->
+<section class="shoutouts" style="background-color: #ddd4ef;">
+    <h2>Website Shoutouts</h2>
+
+    <p>Go check out Seeed Studio Fusion's website below! They supply PCBs, SMT stencils, and much more with all of their convenient services like their PCB assemblies and manufacturing service. Also, their support team is very quick with email or on their social media networks, and Seeed Studio provides excellent DHL shipping for all of their products. Check out their main, PCB assembly, and PCB prototyping website with the links below:</p>
+
+    <p><a href="https://www.seeedstudio.com/fusion.html" target=”_blank” rel=”noopener noreferrer”>Seeed Studio Fusion</a> – Focus on <a href="https://www.seeedstudio.com/fusion_pcb.html" target=”_blank” rel=”noopener noreferrer”>PCB prototyping</a> and <a href="https://www.seeedstudio.com/prototype-pcb-assembly.html" target=”_blank” rel=”noopener noreferrer”>PCB assembly</a> for more than 10 years. Only $4.90 for 10-piece PCBs up to 10×10mm.</p>
+
+    <p>You can check out my review for their service <a href="">here</a>:</p>
+
+    <ul class="links">
+        <li><a href="">Seeed Studio PCB Prototype & Assembly Service Review</a></li>
+    </ul>
+
+    <hr>
+
+    <p>Furthermore down this website shoutout list, I would like to mention Bittele Electronics, a company specialising in everything PCB. Their services include PCB fabrications, assemblies, or even IC (integrated circuit) programming. Bittele's support team is phenomenal in their responses and their website can cater for all of your questions you may have on hand. You can check out their PCB Assembly Services webpage with information regarding quotes, their supported Circuit Card Assembly Capabilities, and much more. Conclusively, I would recommend this company to all you fellow makers!</p>
+</section>
+
+<!-- Projects Guide; pink -->
+<section class="projects-guide" style="background-color: #ffd9f4;">
+    <h2>A Guide to our Projects</h2>
+
+    <p>Our Arduino projects offer a wide variety of content for the whole community. There are projects for beginners to advanced makers. In each project, we include pictures of the real circuit working and the components. We set up our projects in this style:</p>
+
+    <ol>
+        <li>Introduction - a brief explanation on important aspects of a project (materials, functions, etc.)</li>
+        <li>Circuit diagram and schematics of the project (Fritzing)</li>
+        <li>The code of the project</li>
+        <li>An explanation about the code</li>
+    </ol>
+
+    <p>There might be additional content to various projects depending on whether that extra piece of information is sufficient and necessary.</p>
+
+    <ul class="links">
+        <li><a href="/projects/arduino">Our Arduino Projects</a></li>
+        <li><a href="/projects/raspberry-pi">Our Raspberry Pi Projects</a></li>
+    </ul>
+</section>
+
+<!-- Reviews Guide; muted green -->
+<section class="reviews-guide" style="background-color: #dffadf;">
+    <h2>A Guide to our Reviews</h2>
+
+    <p>The product reviews we have on our website consists of important elements to educate somebody about the module/sensor itself. The media we put on each review include:</p>
+
+    <ul>
+        <li>The product specifications and/or parts list (if necessary)</li>
+        <li>My personal product review</li>
+        <li>The pinout of that product</li>
+        <li>The sample code for that product</li>
+        <li>The product page for that item</li>
+        <li>Other information (discount codes, link to projects, etc.)</li>
+    </ul>
+
+    <ul class="links">
+        <li><a href="/reviews/product">Our Product Reviews</a></li>
+    </ul>
+
+</section>
+
+<!-- Company reviews; red -->
+<section class="company-reviews" style="background-color: #e46161;">
+    <h2>Company Reviews</h2>
+
+    <h4>JLCPCB</h4>
+
+    <p>When I first was looking for professional PCB fabrication services which charges reasonable prices, I stumbled upon JLCPCB, a company based in China who offers these services. Soon enough, I found that this company was truly best for anybody as they have an amazing quality of products and cheap charges. Below, you can find three articles based on my experience with JLCPCB:</p>
+
+    <ul class="links">
+        <li><a href="">An Introduction To JLCPCB & Ordering Your PCB</a></li>
+        <li><a href="">JLCPCB's PCB Review</a></li>
+        <li><a href="">Astable Multivabrator Circuit by JLCPCB</a></li>
+        <li><a href="">200Hz Triangle Wave Generator by JLCPCB</a></li>
+    </ul>
+
+    <hr>
+
+    <h4>Win Source Electronics</h4>
+
+    <p>Everybody starts off their electronics journey with the need to purchase electronic components in general, and a lot of distributors have many, many varieties of what you can choose from. However, as an electronic hobbyist with a lot of experience with different products from different many manufacturers and distributors, I would recommend Win Source Electronics as one of your one-stop destinations for electronic parts. My featured opinion and review is in the article below and a tutorial to how I got free electronic components from Win Source Electornics:</p>
+
+    <ul class="links">
+        <li><a href="">Win Source Electronics Review</a></li>
+        <li><a href="">How to get Free Electronic Components with Win Source Electronics</a></li>
+    </ul>
+
+    <hr>
+
+    <h4>LCSC Electronics</h4>
+
+    <p>Check out my detailed review of LCSC Electronics by clicking the button below:</p>
+
+    <ul class="links">
+        <li><a href="">My Review of LCSC Electronics</a></li>
+    </ul>
+
+    <hr>
+
+    <h4>PCBWay</h4>
+
+    <p>Check out my detailed review of PCBWay by clicking the button below:</p>
+
+    <ul class="links">
+        <li><a href="">My Full Review and Experience with PCBWay</a></li>
+    </ul>
+
+    <hr>
+
+    <h4>Stariver Circuit</h4>
+
+    <p>​Check out my detailed review of Stariver Circuit by clicking the button below:</p>
+
+    <ul class="links">
+        <li><a href="">Stariver Circuit Review</a></li>
+    </ul>
+
+</section>
