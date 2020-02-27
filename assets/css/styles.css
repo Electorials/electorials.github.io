@@ -30,6 +30,10 @@ nav {
 
     font-family: 'Monteserrat', sans-serif;
     text-align: center;
+
+    z-index: 1;
+    /* Without this, the hr lines strangely would be visible in the navbar
+    because of their opacity declaration. */
 }
 
 .logo {
@@ -114,11 +118,6 @@ main {
     padding: calc(var(--nav-height) - 2em) 0 0;
 }
 
-/* .content > *,
-.content > div > * {
-    margin: auto 2rem;
-} */
-
 .content {
     margin: 2rem auto 0;
 }
@@ -189,10 +188,15 @@ section {
 }
 
 /* Targets all immediate children of the section tags.
-Adds equal top and bottom margins within each coloured section for some nice
-uniformity. */
+- Content will expand as it grows from small to a max of 60rem. Wider viewport
+would create the whitespace similar to the original site.
+- Adds equal top and bottom margins within each coloured section for some nice
+uniformity, while also horizontally centring the children and keeping the
+background colour stretched to the viewport edges.
+ */
 section > * {
-    margin: 1.125rem 0;
+    max-width: 60rem;
+    margin: 1.125rem auto;
 }
 
 section h2 {
@@ -203,6 +207,17 @@ section h2 {
 
 section h4 {
     font-size: 1.75rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+section hr {
+    margin: 2rem auto;
+    border-color: black;
+    opacity: 0.375;
+    /* ^^^ Changes the opacity of the hr lines. Set at 0.375 to maintain
+    visibility, while also sticking close to the background colours'
+    saturation levels. */
 }
 
 section p,
@@ -265,13 +280,14 @@ section li {
 
 /***** Footer content rules *****/
 footer {
-    padding: 2.75em 2em;
-    min-width: 100%;
+    padding: 0 1.5rem;
+    margin: 2.75rem auto;
+    max-width: 60rem;
+    /* ^^^ These three rules bring the footer close to how the main content is
+    laid out. */
+    text-align: center;
     background-color: white;
     font-family: 'Lato', sans-serif;
-    text-align: center;
-
-    border-top: 1px solid red;
 }
 
 footer > div {
@@ -279,7 +295,8 @@ footer > div {
 }
 
 footer hr {
-
+    border-color: black;
+    opacity: 0.375;
 }
 
 #footer-links ul {
@@ -328,7 +345,11 @@ footer ul li {
     font-family: 'Lato', sans-serif;
 }
 
-/* * { background-color: rgba(255,0,0,.2); }
+/* TODO: Create media query at 800px for Footer. Footer items must be arranged
+vertically, or they will be cut off when the viewport gets too small.*/
+
+/*
+* { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
 * * * { background-color: rgba(0,0,255,.2); }
 * * * * { background-color: rgba(255,0,255,.2); }
@@ -336,4 +357,5 @@ footer ul li {
 * * * * * * { background-color: rgba(255,255,0,.2); }
 * * * * * * * { background-color: rgba(255,0,0,.2); }
 * * * * * * * * { background-color: rgba(0,255,0,.2); }
-* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+*/
