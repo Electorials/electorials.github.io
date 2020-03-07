@@ -8,7 +8,7 @@
 
 /***** Globals *****/
 * {
-    line-height: 1.8em;
+    line-height: 1.75rem;
     font-family: sans-serif;
 }
 
@@ -70,6 +70,7 @@ nav {
     width: var(--item-width);
     transform: translateX(calc((100% - var(--item-width)) / 2 ));
     line-height: 1.6rem;
+    text-decoration: none;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
 1180px or somewhere wider. */
@@ -166,6 +167,10 @@ main {
     padding: 1.25rem 1.25rem 3.75rem;
 }
 
+.hero-text * {
+    line-height: 1.8em;
+}
+
 .hero h1, .hero h2 {
     text-transform: uppercase;
     font-family: 'Patua One', serif;
@@ -184,7 +189,7 @@ main {
 
 /*** Section rules ***/
 section {
-    padding: 2rem 4rem;
+    padding: 2rem;
 }
 
 /* Targets all immediate children of the section tags.
@@ -202,11 +207,11 @@ section > * {
 section h2 {
     text-align: center;
     /* margin-bottom: 1.5rem; */
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 section h4 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     text-decoration: underline;
     text-transform: uppercase;
 }
@@ -223,7 +228,7 @@ section hr {
 section p,
 section ul li,
 section ol li {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 section li {
@@ -231,12 +236,12 @@ section li {
 }
 
 .quote blockquote {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
 }
 
 .quote p {
     text-align: right;
-    font-size: calc(15rem / 9);
+    font-size: 1.3rem;
     color: #8d2424;
     font-weight: 700;
 }
@@ -249,7 +254,7 @@ section li {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     min-height: 100%;
@@ -269,6 +274,8 @@ section li {
     border: .25rem solid #5a5f63;
     background: white;
     color: #5a5f63;
+    text-decoration: none;
+    font-weight: 600;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -301,7 +308,6 @@ footer hr {
 
 #footer-links ul {
     list-style-type: none;
-    margin: 2em;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -309,6 +315,8 @@ footer hr {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #footer-links,
@@ -318,7 +326,7 @@ footer hr {
 
 /* This li is .footer-item */
 footer ul li {
-    margin: .5em;
+    margin: .325rem 0;
     font-size: 1em;
 }
 
@@ -326,10 +334,12 @@ footer ul li {
     display: block;
     padding: 0.75em;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .footer-item a:hover {
     background-color: #e2e2e2;
+    color: #575252
 }
 
 #footer-banner {
@@ -345,8 +355,23 @@ footer ul li {
     font-family: 'Lato', sans-serif;
 }
 
-/* TODO: Create media query at 800px for Footer. Footer items must be arranged
-vertically, or they will be cut off when the viewport gets too small.*/
+@media only screen and (min-width: 800px) {
+    #footer-links ul {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    footer ul li {
+        margin: .125rem;
+    }
+}
+
+/* TODO:
+- Create hover effect/animations for button-like links
+- Better text colour contrast for dark section backgrounds
+- Create :hover rules for links with `a:hover`. This is for if somebody is navigating through links with their keyboard and needs a clear indication of what link they're on.
+    - Also figure out how to change the behaviour of focusing on a link so that it does not show on the edges of the viewport, especially when navigating backwards; focused links would be hidden behind the sticky navbar."
+    - Might create seperate rule for button-like links*/
 
 /*
 * { background-color: rgba(255,0,0,.2); }
