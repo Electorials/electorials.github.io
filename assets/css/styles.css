@@ -34,6 +34,9 @@ nav {
     z-index: 1;
     /* Without this, the hr lines strangely would be visible in the navbar
     because of their opacity declaration. */
+
+    outline: #ff6100 .125rem solid;
+    /* Adds bottom outline to the navbar. */
 }
 
 .logo {
@@ -76,7 +79,12 @@ nav {
 1180px or somewhere wider. */
 
 .menu-item a:hover {
-    background-color: #e2e2e2;
+	background-color: rgba(255, 97, 0, .75);
+}
+
+/* Should add a border around nav item when navigating with Tab key */
+.menu-item a:focus {
+    border: #ff6100 .125rem solid;
 }
 
 /** Dropdown menu rules start **/
@@ -210,6 +218,10 @@ main {
 /*** Section rules ***/
 section {
     padding: 2rem;
+    /* border: rgba(255, 97, 0) solid .125rem; */
+    outline: #ff6100 .125rem solid;
+    /* Both do almost the same thing. But one might let me do a partial,
+    centred border, with or without the vertical borders. */
 }
 
 /* Targets all immediate children of the section tags.
@@ -358,8 +370,12 @@ footer ul li {
 }
 
 .footer-item a:hover {
-    background-color: #e2e2e2;
+    background-color: rgba(255, 97, 0, .75);
     color: #575252
+}
+
+.footer-item a:focus {
+    border: #ff6100 .125rem solid;
 }
 
 #footer-banner {
