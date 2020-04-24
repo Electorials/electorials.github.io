@@ -148,7 +148,6 @@ main {
 }
 
 .hero {
-    text-align: center;
     width: 100vw;
     margin: 0;
     min-height: 35em;
@@ -187,27 +186,25 @@ main {
     display: inline-block;
     /* font-size: 1.5em; */
     width: 100%;
-    padding: 1.25rem 1.25rem 3.75rem;
+    padding: 0 0 3.75rem;
+    text-align: center;
 }
 
 .hero-text * {
-    line-height: 1.8em;
+    line-height: 2rem;
+    margin: 2rem 1.5rem;
 }
 
 .hero h1, .hero h2 {
     text-transform: uppercase;
     font-family: 'Patua One', serif;
-    color: rgb(177, 245, 155);
-}
-
-.hero h2 {
-    margin: 0 4em;
+    color: rgb(43, 89, 12);
 }
 
 .hero p {
     font-family: 'Open Sans', sans-serif;
     margin-top: 1.5em;
-    color: rgb(255, 215, 191);
+    color: rgb(147, 219, 223);
 }
 
 /*** Section rules ***/
@@ -378,7 +375,16 @@ footer ul li {
     font-family: 'Lato', sans-serif;
 }
 
+/* For screens whose resolution width is 800px or greater */
 @media only screen and (min-width: 800px) {
+    .hero-text * {
+        margin: 2rem 2.5rem;
+    }
+
+    .hero h2 {
+        margin: 0 4rem;
+    }
+
     #footer-links ul {
         flex-wrap: nowrap;
         flex-direction: row;
