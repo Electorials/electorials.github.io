@@ -1,5 +1,5 @@
 :root {
-    --nav-height: 3.75em;
+    --nav-height: 4rem;
 }
 
 *, *::before, *::after {
@@ -42,12 +42,17 @@ nav {
 .logo {
     float: left;
     margin: 0 1em;
+    height: 100%;
 }
 
 .logo,
 .logo img {
-    max-height: var(--nav-height);
+    max-height: 100%;
     display: inline;
+}
+
+.logo img {
+    padding: .125rem;
 }
 
 /*** Nav menu ***/
@@ -55,7 +60,7 @@ nav {
     list-style-type: none;
     float: right;
     margin: 0 1em;
-    height: var(--nav-height);
+    height: 100%;
 
     display: -webkit-box;
     display: -ms-flexbox;
