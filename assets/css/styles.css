@@ -132,6 +132,7 @@ nav ul.dropdown li.menu-item {
 
 main {
     padding: calc(var(--nav-height) - 2em) 0 0;
+    border-bottom: solid #ff6100 .125rem;
 }
 
 .content {
