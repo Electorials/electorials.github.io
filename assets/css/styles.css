@@ -225,11 +225,28 @@ main {
 /*** Section rules ***/
 section {
     padding: 2rem;
-    /* border: rgba(255, 97, 0) solid .125rem; */
-    outline: #ff6100 .125rem solid;
-    /* Both do almost the same thing. But one might let me do a partial,
-    centred border, with or without the vertical borders. */
 }
+
+.section-border {
+    height: .25rem;
+    background-color: #ff6100;
+    margin: 0 auto;
+    width: 75vw;
+    max-width: 45rem;
+}
+/***********
+About .section-border:
+Using the ::before and ::after pseudo-classes for the section tag doesn't seem
+to make adding a border easy without manipulating margin and padding values.
+
+Margin values as so to have it aligned to where the content begins and ends.
+Viewport width to change the border width according to viewport width, but
+stops growing at 45rem; it stays below the `section > *` max-width value, while
+not being too long or short regardless of viewport width.
+If there is no max-width, the border would reach into the margins when on a
+wide viewport.
+***********/
+
 
 /* Targets all immediate children of the section tags.
 - Content will expand as it grows from small to a max of 60rem. Wider viewport
