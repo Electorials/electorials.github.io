@@ -24,8 +24,11 @@ body {
 nav {
     position: fixed;
     min-width: 100%;
-    height: var(--nav-height);
-
+    height: calc(var(--nav-height) + .125rem);
+    /* .125rem is border width.
+    Replaces outline declaration issue that would
+    flow outside of nav. Also keeps nav content height at 4rem when border is
+    added.*/
     background-color: white;
 
     font-family: 'Monteserrat', sans-serif;
@@ -35,7 +38,7 @@ nav {
     /* Without this, the hr lines strangely would be visible in the navbar
     because of their opacity declaration. */
 
-    outline: #ff6100 .125rem solid;
+    border-bottom: #ff6100 .125rem solid;
     /* Adds bottom outline to the navbar. */
 }
 
