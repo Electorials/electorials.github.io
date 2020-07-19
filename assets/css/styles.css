@@ -1,5 +1,5 @@
 :root {
-    --nav-height: 4rem;
+    --nav-height: 5rem;
 }
 
 *, *::before, *::after {
@@ -22,6 +22,13 @@ body {
 
 /***** Nav rules *****/
 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     position: fixed;
     min-width: 100%;
     height: calc(var(--nav-height) + .125rem);
@@ -50,7 +57,7 @@ nav {
 
 .logo,
 .logo img {
-    max-height: 100%;
+    max-height: 4rem;
     display: inline;
 }
 
@@ -75,11 +82,11 @@ nav {
 .menu-item a {
     --item-width: 100%;
     display: flex;
-    padding: 1.125rem .875rem;
+    padding: .125rem .875rem;
     font-size: .875em;
     width: var(--item-width);
     transform: translateX(calc((100% - var(--item-width)) / 2 ));
-    line-height: 1.6rem;
+    line-height: 1.5rem;
     text-decoration: none;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
@@ -418,6 +425,19 @@ footer ul li {
 
 /* For screens whose resolution width is 800px or greater */
 @media only screen and (min-width: 800px) {
+    :root {
+        --nav-height: 7rem;
+    }
+
+    nav {
+        height: calc(var(--nav-height) + .125rem);
+    }
+
+    .menu-item a {
+        padding: 1.125rem .875rem;
+        line-height: 1.6rem;
+    }
+
     .hero-text * {
         margin: 2rem 2.5rem;
     }
