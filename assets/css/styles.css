@@ -91,7 +91,7 @@ nav {
 
 /* Should add a border around nav item when navigating with Tab key */
 .menu-item a:focus {
-    border: #ff6100 .125rem solid;
+    outline: #ff6100 .125rem solid;
 }
 
 /** Dropdown menu rules start **/
