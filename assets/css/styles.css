@@ -427,7 +427,12 @@ footer ul li {
     }
 
     .logo {
-        margin: 1.5rem;
+        margin: 1rem;
+    }
+
+    .logo,
+    .logo img {
+        max-height: 5rem;
     }
 
     .menu-item a {
