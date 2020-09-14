@@ -131,14 +131,26 @@ nav ul.dropdown li.menu-item {
 
 
 main {
-    padding: calc(var(--nav-height) - 2em) 0 0;
+    padding: var(--nav-height) 0 0;
     border-bottom: solid #ff6100 .125rem;
 }
 
-.content {
-    margin: 2rem auto 0;
+main > * {
+    margin: 1.125rem auto;
+    padding: 0 2rem;
 }
 
+main > :first-child {
+    margin-top: 3.125rem;
+}
+
+main > :last-child {
+    margin-bottom: 3.125rem;
+}
+
+main > header[class] {
+    margin-top: 0;
+}
 
 /*** Banner/hero rules ***/
 .banner {
@@ -165,7 +177,7 @@ main {
 
 .hero {
     width: 100vw;
-    margin: 0;
+    margin: 0 0 3.125rem;
     min-height: 35em;
 
     background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
@@ -224,14 +236,10 @@ main {
 }
 
 /*** Section rules ***/
-section {
-    padding: 2rem;
-}
-
 .section-border {
     height: .25rem;
     background-color: #ff6100;
-    margin: 0 auto;
+    margin: 3.125rem auto;
     width: 75vw;
     max-width: 45rem;
 }

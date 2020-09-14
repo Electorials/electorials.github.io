@@ -1,5 +1,5 @@
 :root {
-    --nav-height: 4rem;
+    --nav-height: 5rem;
 }
 
 *, *::before, *::after {
@@ -24,8 +24,11 @@ body {
 nav {
     position: fixed;
     min-width: 100%;
-    height: var(--nav-height);
-
+    height: calc(var(--nav-height) + .125rem);
+    /* .125rem is border width.
+    Replaces outline declaration issue that would
+    flow outside of nav. Also keeps nav content height at 4rem when border is
+    added.*/
     background-color: white;
 
     font-family: 'Monteserrat', sans-serif;
@@ -35,19 +38,19 @@ nav {
     /* Without this, the hr lines strangely would be visible in the navbar
     because of their opacity declaration. */
 
-    outline: #ff6100 .125rem solid;
+    border-bottom: #ff6100 .125rem solid;
     /* Adds bottom outline to the navbar. */
 }
 
 .logo {
     float: left;
-    margin: 0 1em;
+    margin: .5rem;
     height: 100%;
 }
 
 .logo,
 .logo img {
-    max-height: 100%;
+    max-height: 4rem;
     display: inline;
 }
 
@@ -58,7 +61,6 @@ nav {
 /*** Nav menu ***/
 .menu {
     list-style-type: none;
-    float: right;
     margin: 0 1em;
     height: 100%;
 
@@ -73,11 +75,11 @@ nav {
 .menu-item a {
     --item-width: 100%;
     display: flex;
-    padding: 1.125rem .875rem;
+    padding: .125rem .875rem;
     font-size: .875em;
     width: var(--item-width);
     transform: translateX(calc((100% - var(--item-width)) / 2 ));
-    line-height: 1.6rem;
+    line-height: 1.5rem;
     text-decoration: none;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
@@ -89,7 +91,7 @@ nav {
 
 /* Should add a border around nav item when navigating with Tab key */
 .menu-item a:focus {
-    border: #ff6100 .125rem solid;
+    outline: #ff6100 .125rem solid;
 }
 
 /** Dropdown menu rules start **/
@@ -129,13 +131,26 @@ nav ul.dropdown li.menu-item {
 
 
 main {
-    padding: calc(var(--nav-height) - 2em) 0 0;
+    padding: var(--nav-height) 0 0;
+    border-bottom: solid #ff6100 .125rem;
 }
 
-.content {
-    margin: 2rem auto 0;
+main > * {
+    margin: 1.125rem auto;
+    padding: 0 2rem;
 }
 
+main > :first-child {
+    margin-top: 3.125rem;
+}
+
+main > :last-child {
+    margin-bottom: 3.125rem;
+}
+
+main > header[class] {
+    margin-top: 0;
+}
 
 /*** Banner/hero rules ***/
 .banner {
@@ -162,7 +177,7 @@ main {
 
 .hero {
     width: 100vw;
-    margin: 0;
+    margin: 0 0 3.125rem;
     min-height: 35em;
 
     background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
@@ -221,13 +236,26 @@ main {
 }
 
 /*** Section rules ***/
-section {
-    padding: 2rem;
-    /* border: rgba(255, 97, 0) solid .125rem; */
-    outline: #ff6100 .125rem solid;
-    /* Both do almost the same thing. But one might let me do a partial,
-    centred border, with or without the vertical borders. */
+.section-border {
+    height: .25rem;
+    background-color: #ff6100;
+    margin: 3.125rem auto;
+    width: 75vw;
+    max-width: 45rem;
 }
+/***********
+About .section-border:
+Using the ::before and ::after pseudo-classes for the section tag doesn't seem
+to make adding a border easy without manipulating margin and padding values.
+
+Margin values as so to have it aligned to where the content begins and ends.
+Viewport width to change the border width according to viewport width, but
+stops growing at 45rem; it stays below the `section > *` max-width value, while
+not being too long or short regardless of viewport width.
+If there is no max-width, the border would reach into the margins when on a
+wide viewport.
+***********/
+
 
 /* Targets all immediate children of the section tags.
 - Content will expand as it grows from small to a max of 60rem. Wider viewport
@@ -398,6 +426,28 @@ footer ul li {
 
 /* For screens whose resolution width is 800px or greater */
 @media only screen and (min-width: 800px) {
+    :root {
+        --nav-height: 7rem;
+    }
+
+    nav {
+        height: calc(var(--nav-height) + .125rem);
+    }
+
+    .logo {
+        margin: 1rem;
+    }
+
+    .logo,
+    .logo img {
+        max-height: 5rem;
+    }
+
+    .menu-item a {
+        padding: 1.125rem .875rem;
+        line-height: 1.6rem;
+    }
+
     .hero-text * {
         margin: 2rem 2.5rem;
     }
