@@ -353,7 +353,7 @@ section li {
 /***** Footer content rules *****/
 footer {
     padding: 0 1.5rem;
-    margin: 2.75rem auto;
+    margin: 2rem auto auto;
     max-width: 60rem;
     /* ^^^ These three rules bring the footer close to how the main content is
     laid out. */
