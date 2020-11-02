@@ -135,9 +135,11 @@ main {
     border-bottom: solid #ff6100 .125rem;
 }
 
-main > * {
+/* Selects all children of <main> that *aren't* .hero nor .section-border */
+main > :not(.hero):not(.section-border) {
     margin: 1.125rem auto;
     padding: 0 2rem;
+    max-width: 64rem;
 }
 
 main > :first-child {
@@ -265,7 +267,6 @@ uniformity, while also horizontally centring the children and keeping the
 background colour stretched to the viewport edges.
  */
 section > * {
-    max-width: 60rem;
     margin: 1.125rem auto;
 }
 
@@ -353,7 +354,7 @@ section li {
 /***** Footer content rules *****/
 footer {
     padding: 0 1.5rem;
-    margin: 2.75rem auto;
+    margin: 2rem auto auto;
     max-width: 60rem;
     /* ^^^ These three rules bring the footer close to how the main content is
     laid out. */
@@ -369,46 +370,6 @@ footer > div {
 footer hr {
     border-color: black;
     opacity: 0.375;
-}
-
-#footer-links ul {
-    list-style-type: none;
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-#footer-links,
-#footer-links ul {
-    margin-top: 0;
-}
-
-/* This li is .footer-item */
-footer ul li {
-    margin: .325rem 0;
-    font-size: 1em;
-}
-
-.footer-item a {
-    display: block;
-    padding: 0.75em;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.footer-item a:hover {
-    background-color: rgba(255, 97, 0, .75);
-    color: #575252
-}
-
-.footer-item a:focus {
-    border: #ff6100 .125rem solid;
 }
 
 #footer-banner {
@@ -454,15 +415,6 @@ footer ul li {
 
     .hero h2 {
         margin: 0 4rem;
-    }
-
-    #footer-links ul {
-        flex-wrap: nowrap;
-        flex-direction: row;
-    }
-
-    footer ul li {
-        margin: .125rem;
     }
 }
 

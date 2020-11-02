@@ -135,9 +135,11 @@ main {
     border-bottom: solid #ff6100 .125rem;
 }
 
-main > * {
+/* Selects all children of <main> that *aren't* .hero nor .section-border */
+main > :not(.hero):not(.section-border) {
     margin: 1.125rem auto;
     padding: 0 2rem;
+    max-width: 64rem;
 }
 
 main > :first-child {
@@ -265,7 +267,6 @@ uniformity, while also horizontally centring the children and keeping the
 background colour stretched to the viewport edges.
  */
 section > * {
-    max-width: 60rem;
     margin: 1.125rem auto;
 }
 
