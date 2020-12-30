@@ -1,5 +1,6 @@
 :root {
     --nav-height: 5rem;
+    --main-content-width: 64rem;
 }
 
 *, *::before, *::after {
@@ -139,7 +140,7 @@ main {
 main > :not(.hero):not(.section-border) {
     margin: 1.125rem auto;
     padding: 0 2rem;
-    max-width: 64rem;
+    max-width: var(--main-content-width);
 }
 
 main > :first-child {

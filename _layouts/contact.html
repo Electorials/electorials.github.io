@@ -20,15 +20,12 @@
         <link rel="stylesheet" href="/assets/css/styles.css">
 
         <!--
-        This style block is meant to write specifically for the Contact page.
-        This
+        This style block is specifically meant for the Contact page.
         -->
         <style>
             form {
                 display: flex;
                 flex-flow: column;
-                max-width: 75%;
-                margin-left: 0;
             }
 
             label,
@@ -38,9 +35,45 @@
                 margin: 0.125rem 0;
             }
 
+            label {
+                margin-bottom: .4rem;
+            }
+
             input,
             textarea {
-                min-width: 75%;
+                width: 100%;
+                max-width: calc(var(--main-content-width) * .4);
+                /* --main-content-width comes from styles.css. */
+            }
+
+            .names {
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 25.6rem;
+                justify-content: space-between;
+                gap: .4rem;
+                /* Currently a working draft. Gives flexbox items definable gap
+                sizes, while also allowing for full spanning of flex items to
+                the flex container's whole width.
+                Supported by Edge, and Firefox and Chrome on Desktop and on
+                Android. Safari on Desktop looks like it will support gap,
+                according to here: https://caniuse.com/flexbox-gap
+                WAY less hack-y than mucking about with
+                margins and possibly media queries.
+                Without the gap, it will look like a small blemish on one area
+                of the whole site, but will go away as overall browser support
+                improves.
+                */
+            }
+
+            .names input {
+                width: 12.4rem;
+                flex-grow: 1;
+            }
+
+            button {
+                width: 6rem;
             }
         </style>
     </head>

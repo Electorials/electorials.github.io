@@ -11,8 +11,10 @@ title: Contact us
     <p><span style="color: red">*</span> <i>Indicates required field</i></p>
 
    <label><p>Name <span style="color: red">*</span></p>
-       <input type="text" name="first-name" placeholder="First name" required>
-       <input type="text" name="last-name" placeholder="Last name">
+       <div class="names">
+           <input type="text" name="first-name" placeholder="First name" required>
+           <input type="text" name="last-name" placeholder="Last name">
+       </div>
    </label>
 
    <label><p>Email <span style="color: red">*</span></p>
@@ -24,7 +26,7 @@ title: Contact us
    </label>
 
    <label><p>Comment <span style="color: red">*</span></p>
-       <textarea name="message" placeholder="Message" style="height: 200px; width: 370px;" required></textarea>
+       <textarea name="message" placeholder="Message" style="height: 200px;" required></textarea>
    </label>
 
    <button type="submit">Submit</button>
