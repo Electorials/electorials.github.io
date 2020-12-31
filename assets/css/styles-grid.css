@@ -82,6 +82,8 @@ nav {
     transform: translateX(calc((100% - var(--item-width)) / 2 ));
     line-height: 1.5rem;
     text-decoration: none;
+    color: black;
+    font-weight: 900;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
 1180px or somewhere wider. */
@@ -226,16 +228,17 @@ main > header[class] {
     margin: 2rem 1.5rem;
 }
 
-.hero h1, .hero h2 {
+.hero h2 {
     text-transform: uppercase;
-    font-family: 'Patua One', serif;
-    color: rgb(43, 89, 12);
+    font-family: 'Verdana', sans-serif;
+    color: #ffc8a7;
 }
 
 .hero p {
     font-family: 'Open Sans', sans-serif;
-    margin-top: 1.5em;
-    color: rgb(147, 219, 223);
+    margin-top: -1em;
+    color: #efc3a6;
+    font-weight: 600;
 }
 
 /*** Section rules ***/
@@ -310,6 +313,7 @@ section li {
 
 .quote blockquote {
     font-size: 1.375rem;
+    font-family: 'Georgia', serif;
 }
 
 .quote p {
@@ -422,7 +426,7 @@ footer hr {
     }
 
     .hero h2 {
-        margin: 0 4rem;
+        margin: 2em 4rem;
     }
 
     .container picture img {
