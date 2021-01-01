@@ -17,6 +17,10 @@ div {
     margin: 2rem auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -136,6 +140,7 @@ nav ul.dropdown li.menu-item {
 main {
     padding: var(--nav-height) 0 0;
     border-bottom: solid #ff6100 .125rem;
+    font-weight: bold;
 }
 
 /* Selects all children of <main> that *aren't* .hero nor .section-border */
