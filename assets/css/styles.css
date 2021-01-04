@@ -204,8 +204,8 @@ main > header[class] {
     background-repeat: no-repeat;
     background-size: cover;
 
-    -webkit-filter: blur(1px);
-    filter: blur(1px);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
 
     height: var(--image-height);
     margin: 0 auto;
