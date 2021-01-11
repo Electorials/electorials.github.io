@@ -10,11 +10,19 @@
 /***** Globals *****/
 * {
     line-height: 1.75rem;
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 div {
     margin: 2rem auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+main a {
+    color: #00e;
 }
 
 body {
@@ -136,6 +144,7 @@ nav ul.dropdown li.menu-item {
 main {
     padding: var(--nav-height) 0 0;
     border-bottom: solid #ff6100 .125rem;
+    font-weight: bold;
 }
 
 /* Selects all children of <main> that *aren't* .hero nor .section-border */
@@ -181,46 +190,39 @@ main > header[class] {
 }
 
 .hero {
+    --image-height: 35rem;
     width: 100vw;
     margin: 0 0 3.125rem;
-    min-height: 35em;
+    min-height: var(--image-height);
+    /* Whole header can expand from minimum width of 35rem. Will never shrink below 35rem. */
+}
 
+.hero-image {
     background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
     var(--hero-image);
     background: -o-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
     var(--hero-image);
     background: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
     var(--hero-image);
-    background-position: 50%;
-    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-        /* `background-size: cover` fits the image into the element's space by
-        the image's shortest dimension. `background-position` is shorthand for
-        `background-position-x` and `background-position-y`, with `-y`
-        defaulting to `center` if `background-position` is only used.
+    background-size: cover;
 
-        If the image is tall, `background-position-y` can be adjusted by
-        percentage; adjusting `background-position-x` does nothing. Vice versa
-        for wide images: `-x` is adjustable while adjusting `-y` does nothing.
-        Abandon `background-position` and use its `-x` and `-y` pairs if the
-        image is tall.
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
 
-        Note that the above works ONLY IF `background-size: cover` is present.
-        If not, then both `background-position`s are adjustable, but the image
-        will NOT scale up nor down to fill the space.
-
-        Percentages make understanding the adjusting easier than with other
-        units, but is still possible with rems and inches for example. The
-        percent unit is based on the element's space, which is why it should
-        make adjusting easier to understand.*/
+    height: var(--image-height);
+    margin: 0 auto;
 }
 
 .hero-text {
-    display: inline-block;
-    /* font-size: 1.5em; */
+    position: absolute;
     width: 100%;
-    padding: 0 0 3.75rem;
     text-align: center;
+    color: #fffd;
+    top: 14rem;
+    transform: translate(0%,-50%);
+    text-shadow: 2px 2px 5px #000;
 }
 
 .hero-text * {
@@ -228,16 +230,14 @@ main > header[class] {
     margin: 2rem 1.5rem;
 }
 
-.hero h2 {
+.hero-text h2 {
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
-    color: #ffc8a7;
 }
 
-.hero p {
+.hero-text p {
     font-family: 'Open Sans', sans-serif;
     margin-top: -1em;
-    color: #efc3a6;
     font-weight: 600;
 }
 
