@@ -25,6 +25,15 @@ main a {
     color: #00e;
 }
 
+main a:focus:not(.links a) {
+    outline: none;
+}
+
+main a:hover:not(.links a),
+main a:focus:not(.links a) {
+    text-decoration: #00e .125rem underline;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -434,13 +443,6 @@ footer hr {
         width: 50%;
     }
 }
-
-/* TODO:
-- Create hover effect/animations for button-like links
-- Better text colour contrast for dark section backgrounds
-- Create :hover rules for links with `a:hover`. This is for if somebody is navigating through links with their keyboard and needs a clear indication of what link they're on.
-    - Also figure out how to change the behaviour of focusing on a link so that it does not show on the edges of the viewport, especially when navigating backwards; focused links would be hidden behind the sticky navbar."
-    - Might create seperate rule for button-like links*/
 
 /*
 * { background-color: rgba(255,0,0,.2); }
