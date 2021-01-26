@@ -230,7 +230,7 @@ main > header[class] {
 }
 
 .banner {
-    --banner-height: 20rem;
+    --banner-height: 16rem;
     width: 100vw;
     margin: 0 0 3.125rem;
     min-height: var(--banner-height);
@@ -246,6 +246,9 @@ main > header[class] {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
 
     height: var(--banner-height);
     margin: 0 auto;
