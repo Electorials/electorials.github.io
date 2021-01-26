@@ -202,8 +202,8 @@ main > header[class] {
     --hero-height: 35rem;
     width: 100vw;
     margin: 0 0 3.125rem;
-    /* Whole header can expand from minimum width of 35rem. Will never shrink below 35rem. */
     min-height: var(--hero-height);
+    /* Whole header can expand from minimum height of 35rem. Will never shrink below 35rem. */
 }
 
 .hero-image {
