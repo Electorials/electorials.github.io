@@ -335,8 +335,9 @@ section li {
 
 section picture img {
     display: block;
-    width: 100%;
-    margin: 2rem auto;
+    max-height: 35rem;
+    max-width: calc(100vw - 4.75rem);
+    /* Keeps images width within width of section */
 }
 
 .quote blockquote {
