@@ -199,11 +199,11 @@ main > header[class] {
 }
 
 .hero {
-    --image-height: 35rem;
+    --hero-height: 35rem;
     width: 100vw;
     margin: 0 0 3.125rem;
-    min-height: var(--image-height);
     /* Whole header can expand from minimum width of 35rem. Will never shrink below 35rem. */
+    min-height: var(--hero-height);
 }
 
 .hero-image {
@@ -220,7 +220,7 @@ main > header[class] {
     -webkit-filter: blur(2px);
     filter: blur(2px);
 
-    height: var(--image-height);
+    height: var(--hero-height);
     margin: 0 auto;
 }
 
