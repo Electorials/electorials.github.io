@@ -272,6 +272,11 @@ main > header[class] {
     margin: 0 1.5rem;
 }
 
+.hero-image,
+.banner-image {
+    clip-path: inset(0);
+}
+
 /*** Section rules ***/
 .section-border {
     height: .25rem;
