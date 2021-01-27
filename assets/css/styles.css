@@ -234,6 +234,7 @@ main > header[class] {
     width: 100vw;
     margin: 0 0 3.125rem;
     min-height: var(--banner-height);
+    position: relative;
 }
 
 .banner-image {
@@ -260,8 +261,10 @@ main > header[class] {
     text-align: center;
     color: #fffd;
     top: 14rem;
-    transform: translate(0%,-100%);
+    transform: translate(0%,-50%);
     text-shadow: 2px 2px 5px #000;
+    top: 50%;
+    margin: 0 auto;
 }
 
 .banner-text h2 {
@@ -468,10 +471,6 @@ footer hr {
 
     .banner {
         --banner-height: 28.125rem;
-    }
-
-    .banner-text {
-        transform: translate(0%,100%);
     }
 
     .banner-text h2 {
