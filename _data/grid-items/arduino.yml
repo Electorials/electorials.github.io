@@ -67,3 +67,6 @@
 
 - name: 'Project 020: 1.3" 240x240 IPS TFT Display Module'
   link: /projects/arduino/project-020-13-240x240-ips-tft-display-module
+
+- name: 'Project 021: Liquid pH0-14 Detection Sensor'
+  link: /projects/arduino/project-021-arduino-liquid-ph0-14-detection-sensor
