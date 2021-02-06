@@ -25,6 +25,15 @@ main a {
     color: #00e;
 }
 
+main a:focus:not(.links a) {
+    outline: none;
+}
+
+main a:hover:not(.links a),
+main a:focus:not(.links a) {
+    text-decoration: #00e .125rem underline;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -147,8 +156,8 @@ main {
     font-weight: bold;
 }
 
-/* Selects all children of <main> that *aren't* .hero nor .section-border */
-main > :not(.hero):not(.section-border) {
+/* Selects all children of <main> that *aren't* .hero, .banner, nor .section-border */
+main > :not(.hero):not(.banner):not(.section-border) {
     margin: 1.125rem auto;
     padding: 0 2rem;
     max-width: var(--main-content-width);
@@ -167,34 +176,13 @@ main > header[class] {
 }
 
 /*** Banner/hero rules ***/
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* These three above centre all content at the exact middle of the X and Y axes */
-
-    flex-direction: column;
-    /* Any siblings under .banner will vertically stack rather than sit next to one another */
-
-    padding: 5.5em;
-    margin: auto;
-
-    /* background-image: url(https://electorials.com/uploads/1/0/1/7/101767294/background-images/944554335.png); */
-    /* This won't be implemented, as it's a sort of proof of concept.
-    The general markup will be this for all pages with the hero/banner section:
-    <div class="banner" style="background-image: url({{ page.banner-image }});"><h1>Page Title</h1></div>
-    {{ page.background-image }} will be defined in each page's front matter variables.
-    The background-image property in the style attribute might be something like this:
-    background-image: url(/assets/img/arduino/banners/{{ page.banner-image }})
-    Might have to use Modernizr.js for using WebP images as the background, while also using JPEG and PNG images on older browsers (https://css-tricks.com/using-webp-images/) */
-}
 
 .hero {
-    --image-height: 35rem;
+    --hero-height: 35rem;
     width: 100vw;
     margin: 0 0 3.125rem;
-    min-height: var(--image-height);
-    /* Whole header can expand from minimum width of 35rem. Will never shrink below 35rem. */
+    min-height: var(--hero-height);
+    /* Whole header can expand from minimum height of 35rem. Will never shrink below 35rem. */
 }
 
 .hero-image {
@@ -211,7 +199,7 @@ main > header[class] {
     -webkit-filter: blur(2px);
     filter: blur(2px);
 
-    height: var(--image-height);
+    height: var(--hero-height);
     margin: 0 auto;
 }
 
@@ -239,6 +227,54 @@ main > header[class] {
     font-family: 'Open Sans', sans-serif;
     margin-top: -1em;
     font-weight: 600;
+}
+
+.banner {
+    width: 100vw;
+    margin: 0 0 3.125rem;
+    min-height: var(--banner-height);
+    position: relative;
+}
+
+.banner-image {
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    var(--banner-image);
+    background: -o-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    var(--banner-image);
+    background: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    var(--banner-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    height: var(--banner-height);
+    margin: 0 auto;
+}
+
+.banner-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #fffd;
+    top: 14rem;
+    transform: translate(0%,-50%);
+    text-shadow: 2px 2px 5px #000;
+    top: 50%;
+    margin: 0 auto;
+}
+
+.banner-text h2 {
+    line-height: 2.25rem;
+    text-transform: uppercase;
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.75rem;
+    margin: 0 1.5rem;
+}
+
+.hero-image,
+.banner-image {
+    clip-path: inset(0);
 }
 
 /*** Section rules ***/
@@ -305,10 +341,11 @@ section li {
     margin: 0 1rem;
 }
 
-.container picture img {
+section picture img {
     display: block;
-    width: 100%;
-    margin: 2rem auto;
+    max-height: 35rem;
+    max-width: calc(100vw - 4.75rem);
+    /* Keeps images width within width of section */
 }
 
 .quote blockquote {
@@ -435,12 +472,11 @@ footer hr {
     }
 }
 
-/* TODO:
-- Create hover effect/animations for button-like links
-- Better text colour contrast for dark section backgrounds
-- Create :hover rules for links with `a:hover`. This is for if somebody is navigating through links with their keyboard and needs a clear indication of what link they're on.
-    - Also figure out how to change the behaviour of focusing on a link so that it does not show on the edges of the viewport, especially when navigating backwards; focused links would be hidden behind the sticky navbar."
-    - Might create seperate rule for button-like links*/
+    .banner-text h2 {
+        font-size: 2.125rem;
+        margin: 0 2.5rem;
+    }
+}
 
 /*
 * { background-color: rgba(255,0,0,.2); }
