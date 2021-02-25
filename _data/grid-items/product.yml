@@ -1,132 +1,142 @@
-# When adding more pages to this folder, make sure to add in the information
-# as how they are here.
-# Make sure to create a new page in /reviews/product/ with the name
-# being *exactly* as it is in `link`, followed by the '.html' file extension
-# If text for `name` already has a " (double-quote) character, use the ' (single-
-# quote character) to surround the whole value of 'name'.
+# When adding more pages to this file, make sure to add in the information as how they are here.
+# Make sure to create a new page in /reviews/product/ with the name being *exactly* as it is in `link`, followed by the ".html" file extension.
 
-- name: "Review 001: KY-008 Laser Module"
-  link: /reviews/product/review-001-ky-008-laser-module
+# If text for `name` already has a " (double-quote) character, use the ' (single-quote character) to surround the whole value of 'name'.
+# Quotes are needed to keep the colons and possibly any other non-alphanumeric characters in `name` from being interpreted.
 
-- name: "Review 002: TEMT6000 Ambient Light Sensor"
-  link: /reviews/product/review-002-temt6000-ambient-light-sensor
+item-count: 44
+columns-for-items: 3
+rows-for-items: 15
 
-- name: "Review 003: Seeeduino v4.2"
-  link: /reviews/product/review-003-seeeduino-v42
+items:
+  - name: "Review 001: KY-008 Laser Module"
+    link: /reviews/product/review-001-ky-008-laser-module
 
-- name: "Review 004: Grove - Dust Sensor (PPD42NS)"
-  link: /reviews/product/review-004-grove-dust-sensor-ppd42ns
+  - name: "Review 002: TEMT6000 Ambient Light Sensor"
+    link: /reviews/product/review-002-temt6000-ambient-light-sensor
 
-- name: "Review 005: Elecfreaks Micro:bit Tinker Kit"
-  link: /reviews/product/review-005-elecfreaks-microbit-tinker-kit
+  - name: "Review 003: Seeeduino v4.2"
+    link: /reviews/product/review-003-seeeduino-v42
 
-- name: 'Review 006: 1.3" I2C White OLED Display'
-  link: /reviews/product/review-006-13-i2c-white-oled-display
+  - name: "Review 004: Grove - Dust Sensor (PPD42NS)"
+    link: /reviews/product/review-004-grove-dust-sensor-ppd42ns
 
-- name: "Review 007: Raspberry Pi Dual Cooling Fan with the Thermal Tape Cooling Kit and the RAM Copper Heatsink"
-  link: /reviews/product/review-007-raspberry-pi-dual-cooling-fan-thermal-tape-ram-copper-heatsink
+  - name: "Review 005: Elecfreaks Micro:bit Tinker Kit"
+    link: /reviews/product/review-005-elecfreaks-microbit-tinker-kit
 
-- name: "Review 008: ​Male-Female 200mm Jumper Wires Pack (Pack of 40)"
-  link: /reviews/product/review-008-male-female-200mm-jumper-wires-pack-pack-of-40
+  - name: 'Review 006: 1.3" I2C White OLED Display'
+    link: /reviews/product/review-006-13-i2c-white-oled-display
 
-- name: "Review 009: Ublox Neo-7N GPS Module"
-  link: /reviews/product/review-009-ublox-neo-7n-gps-module
+  - name: "Review 007: Raspberry Pi Dual Cooling Fan with the Thermal Tape Cooling Kit and the RAM Copper Heatsink"
+    link: /reviews/product/review-007-raspberry-pi-dual-cooling-fan-thermal-tape-ram-copper-heatsink
 
-- name: "Review 010: 5-inch HDMI Capacitive Touch Screen Display"
-  link: /reviews/product/review-010-5-inch-hdmi-capacitive-touch-screen-display
+  - name: "Review 008: ​Male-Female 200mm Jumper Wires Pack (Pack of 40)"
+    link: /reviews/product/review-008-male-female-200mm-jumper-wires-pack-pack-of-40
 
-- name: "Review 011: Maker Uno"
-  link: /reviews/product/review-011-maker-uno
+  - name: "Review 009: Ublox Neo-7N GPS Module"
+    link: /reviews/product/review-009-ublox-neo-7n-gps-module
 
-- name: "Review 012: MLX90614 Infrared Temperature Sensor"
-  link: /reviews/product/review-012-mlx90614-infrared-temperature-sensor-review
+  - name: "Review 010: 5-inch HDMI Capacitive Touch Screen Display"
+    link: /reviews/product/review-010-5-inch-hdmi-capacitive-touch-screen-display
 
-- name: "Review 013: Reyax RYLR896 LoRa Transceiver Module"
-  link: /reviews/product/review-013-reyax-rylr896-lora-transceiver-module
+  - name: "Review 011: Maker Uno"
+    link: /reviews/product/review-011-maker-uno
 
-- name: "Review 014: DC to DC Automatic Boost Buck Converter 5 - 32V to 1.25 - 20V 5A"
-  link: /reviews/product/review-014-dc-to-dc-automatic-boost-buck-converter-5-32v-to-125-20v-5a
+  - name: "Review 012: MLX90614 Infrared Temperature Sensor"
+    link: /reviews/product/review-012-mlx90614-infrared-temperature-sensor-review
 
-- name: "Review 015: RoyalOHM 10K ohm 1/2W 5% Carbon Film Resistor"
-  link: /reviews/product/review-015-royalohm-10k-ohm-12w-5-carbon-film-resistor
+  - name: "Review 013: Reyax RYLR896 LoRa Transceiver Module"
+    link: /reviews/product/review-013-reyax-rylr896-lora-transceiver-module
 
-- name: "Review 016: UM24 USB Meter"
-  link: /reviews/product/review-016-um24-usb-meter
+  - name: "Review 014: DC to DC Automatic Boost Buck Converter 5 - 32V to 1.25 - 20V 5A"
+    link: /reviews/product/review-014-dc-to-dc-automatic-boost-buck-converter-5-32v-to-125-20v-5a
 
-- name: "Review 017: LED Light Control Bluetooth Module for iOS/Android"
-  link: /reviews/product/review-017-led-light-control-bluetooth-module-for-ios-android
+  - name: "Review 015: RoyalOHM 10K ohm 1/2W 5% Carbon Film Resistor"
+    link: /reviews/product/review-015-royalohm-10k-ohm-12w-5-carbon-film-resistor
 
-- name: "Review 018: Maker pHat"
-  link: /reviews/product/review-018-maker-phat
+  - name: "Review 016: UM24 USB Meter"
+    link: /reviews/product/review-016-um24-usb-meter
 
-- name: "Review 019: XH-M219 Multi-Function Clock Module"
-  link: /reviews/product/review-019-xh-m219-multi-function-clock-module
+  - name: "Review 017: LED Light Control Bluetooth Module for iOS/Android"
+    link: /reviews/product/review-017-led-light-control-bluetooth-module-for-ios-android
 
-- name: "Review 020: Nichicon 1µF 50v Radial Electrolytic Capacitor"
-  link: /reviews/product/review-020-nichicon-1-microf-50v-radial-electrolytic-capacitor
+  - name: "Review 018: Maker pHat"
+    link: /reviews/product/review-018-maker-phat
 
-- name: "Review 021: RoyalOHM 470 ohm 1/2W 1% Metal Film Resistor"
-  link: /reviews/product/review-021-royalohm-470-ohm-12w-1-metal-film-resistor
+  - name: "Review 019: XH-M219 Multi-Function Clock Module"
+    link: /reviews/product/review-019-xh-m219-multi-function-clock-module
 
-- name: "Review 022: Phillips BC547 45v 0.1A NPN Transistor"
-  link: /reviews/product/review-022-phillips-bc547-45v-01a-npn-transistor
+  - name: "Review 020: Nichicon 1µF 50v Radial Electrolytic Capacitor"
+    link: /reviews/product/review-020-nichicon-1-microf-50v-radial-electrolytic-capacitor
 
-- name: "Review 023: BH1750 Light Sensor"
-  link: /reviews/product/review-023-bh1750-light-sensor
+  - name: "Review 021: RoyalOHM 470 ohm 1/2W 1% Metal Film Resistor"
+    link: /reviews/product/review-021-royalohm-470-ohm-12w-1-metal-film-resistor
 
-- name: "Review 024: 28-pin DIP Socket"
-  link: /reviews/product/review-024-28-pin-dip-socket
+  - name: "Review 022: Phillips BC547 45v 0.1A NPN Transistor"
+    link: /reviews/product/review-022-phillips-bc547-45v-01a-npn-transistor
 
-- name: "Review 025: LM117T 3.3V Low Dropout Voltage Regulator"
-  link: /reviews/product/review-025-lm117t-33v-low-dropout-voltage-regulator
+  - name: "Review 023: BH1750 Light Sensor"
+    link: /reviews/product/review-023-bh1750-light-sensor
 
-- name: "Review 026: DFRobot XXL Printing Bot T-Shirt"
-  link: /reviews/product/review-026-dfrobot-xxl-printing-bot-t-shirt
+  - name: "Review 024: 28-pin DIP Socket"
+    link: /reviews/product/review-024-28-pin-dip-socket
 
-- name: "Review 027: BME280 Environmental Sensor"
-  link: /reviews/product/review-027-bme280-environmental-sensor
+  - name: "Review 025: LM117T 3.3V Low Dropout Voltage Regulator"
+    link: /reviews/product/review-025-lm117t-33v-low-dropout-voltage-regulator
 
-- name: "Review 028: 100K ohm 1W 5% Carbon Film Resistor"
-  link: /reviews/product/review-028-100k-ohm-1w-5-carbon-film-resistor
+  - name: "Review 026: DFRobot XXL Printing Bot T-Shirt"
+    link: /reviews/product/review-026-dfrobot-xxl-printing-bot-t-shirt
 
-- name: "Review 029: Hebei 12v 10A Peltier Thermoelectric Cooler"
-  link: /reviews/product/review-029-hebei-12v-10a-peltier-thermoelectric-cooler
+  - name: "Review 027: BME280 Environmental Sensor"
+    link: /reviews/product/review-027-bme280-environmental-sensor
 
-- name: "Review 030: HY510 Black Heat Sink Compound"
-  link: /reviews/product/review-030-hy510-blackheat-sink-compound
+  - name: "Review 028: 100K ohm 1W 5% Carbon Film Resistor"
+    link: /reviews/product/review-028-100k-ohm-1w-5-carbon-film-resistor
 
-- name: "Review 031: 22 AWG Green UL1007 Solid Core Hook-Up Wire (1 ft)"
-  link: /reviews/product/review-031-22-awg-green-ul1007-solid-core-hook-up-wire-1-ft
+  - name: "Review 029: Hebei 12v 10A Peltier Thermoelectric Cooler"
+    link: /reviews/product/review-029-hebei-12v-10a-peltier-thermoelectric-cooler
 
-- name: "Review 032: Dual USB Mobile Battery Charger"
-  link: /reviews/product/review-032-dual-usb-mobile-battery-charger
+  - name: "Review 030: HY510 Black Heat Sink Compound"
+    link: /reviews/product/review-030-hy510-blackheat-sink-compound
 
-- name: "Review 033: 400 Point White Plug-In Breadboard (Solder-Less)"
-  link: /reviews/product/review-033-400-point-white-plug-in-breadboard-solder-less
+  - name: "Review 031: 22 AWG Green UL1007 Solid Core Hook-Up Wire (1 ft)"
+    link: /reviews/product/review-031-22-awg-green-ul1007-solid-core-hook-up-wire-1-ft
 
-- name: "Review 034:​ RoyalOHM 470 ohm 1/8W 1% Metal Film Resistor"
-  link: /reviews/product/review-034-royalohm-470-ohm-18w-1-metal-film-resistor
+  - name: "Review 032: Dual USB Mobile Battery Charger"
+    link: /reviews/product/review-032-dual-usb-mobile-battery-charger
 
-- name: "Review 035: F1 Plus Smart Watch"
-  link: /reviews/product/review-035-f1-plus-smart-watch
+  - name: "Review 033: 400 Point White Plug-In Breadboard (Solder-Less)"
+    link: /reviews/product/review-033-400-point-white-plug-in-breadboard-solder-less
 
-- name: "Review 036: XY-MUP USB DC-DC Buck Boost Power Supply Module"
-  link: /reviews/product/review-036-xy-mup-usb-dc-dc-buck-boost-power-supply-module
+  - name: "Review 034:​ RoyalOHM 470 ohm 1/8W 1% Metal Film Resistor"
+    link: /reviews/product/review-034-royalohm-470-ohm-18w-1-metal-film-resistor
 
-- name: "Review 037: Zotek ZT219 Digital Multimeter"
-  link: /reviews/product/review-037-zotek-zt219-digital-multimeter
+  - name: "Review 035: F1 Plus Smart Watch"
+    link: /reviews/product/review-035-f1-plus-smart-watch
 
-- name: "Review 038: MultiComp 0.1 µF 50v Ceramic Disc Capacitor"
-  link: /reviews/product/review-038-multicomp-01-microf-50v-ceramic-disc-capacitor
+  - name: "Review 036: XY-MUP USB DC-DC Buck Boost Power Supply Module"
+    link: /reviews/product/review-036-xy-mup-usb-dc-dc-buck-boost-power-supply-module
 
-- name: "Review 039: 0.22 µF 50v Ceramic Disc Capacitor"
-  link: /reviews/product/review-039-022-microf-50v-ceramic-disc-capacitor
+  - name: "Review 037: Zotek ZT219 Digital Multimeter"
+    link: /reviews/product/review-037-zotek-zt219-digital-multimeter
 
-- name: "Review 040: ZK-UT USB Multi-Function Meter"
-  link: /reviews/product/review-040-zk-ut-usb-multi-function-meter
+  - name: "Review 038: MultiComp 0.1 µF 50v Ceramic Disc Capacitor"
+    link: /reviews/product/review-038-multicomp-01-microf-50v-ceramic-disc-capacitor
 
-- name: "Review 041: ICL8038 Signal Generator"
-  link: /reviews/product/review-041-icl8038-signal-generator
+  - name: "Review 039: 0.22 µF 50v Ceramic Disc Capacitor"
+    link: /reviews/product/review-039-022-microf-50v-ceramic-disc-capacitor
 
-- name: "Review 042: Liquid pH0-14 Detection Sensor and BNC PH Electrode Probe"
-  link: /reviews/product/review-042-liquid-ph0-14-detection-sensor-and-bnc-ph-electrode-probe
+  - name: "Review 040: ZK-UT USB Multi-Function Meter"
+    link: /reviews/product/review-040-zk-ut-usb-multi-function-meter
+
+  - name: "Review 041: ICL8038 Signal Generator"
+    link: /reviews/product/review-041-icl8038-signal-generator
+
+  - name: "Review 042: Liquid pH0-14 Detection Sensor and BNC PH Electrode Probe"
+    link: /reviews/product/review-042-liquid-ph0-14-detection-sensor-and-bnc-ph-electrode-probe
+
+  - name: "Review 043: 18 AWG Blue UL1007 Stranded Hook-up Wire (1 ft)"
+    link: /reviews/product/review-043-18-awg-blue-ul1007-stranded-hook-up-wire-1-ft
+
+  - name: "Review 044: microbit Robotic Wifi Camera with Electric Control"
+    link: /reviews/product/review-044-microbit-robotic-wifi-camera-with-electric-control

@@ -1,36 +1,46 @@
-# When adding more pages to this folder, make sure to add in the information
-# as how they are here.
-# Make sure to create a new page in /projects/general-electronics/ with the name
-# being *exactly* as it is in `link`, followed by the '.html' file extension
-# If text for `name` already has a " (double-quote) character, use the ' (single-
-# quote character) to surround the whole value of 'name'.
+# When adding more pages to this file, make sure to add in the information as how they are here.
+# Make sure to create a new page in /projects/general-electronics/ with the name being *exactly* as it is in `link`, followed by the ".html" file extension.
 
-- name: "Project 001: DC to DC Automatic Boost Buck Converter 5 - 32V to 1.25 - 20V 5A Setup"
-  link: /projects/general-electronics/project-001-dc-to-dc-automatic-boost-buck-converter-5-32v-to-1.25-20v-5a-setup
+# If text for `name` already has a " (double-quote) character, use the ' (single-quote character) to surround the whole value of 'name'.
+# Quotes are needed to keep the colons and possibly any other non-alphanumeric characters in `name` from being interpreted.
 
-- name: "Project 002: UM24 USB Meter Tutorial"
-  link: /projects/general-electronics/project-002-um24-usb-meter-tutorial
+item-count: 12
+columns-for-items: 3
+rows-for-items: 4
 
-- name: "Project 003: LED Light Control Bluetooth Module for iOS/Android Setup"
-  link: /projects/general-electronics/project-003-led-ligt-control-bluetooth-module-for-ios-android-setup
+items:
+  - name: "Project 001: DC to DC Automatic Boost Buck Converter 5 - 32V to 1.25 - 20V 5A Setup"
+    link: /projects/general-electronics/project-001-dc-to-dc-automatic-boost-buck-converter-5-32v-to-1.25-20v-5a-setup
 
-- name: "Project 004: Cadsoft Eagle (.brd) to Gerber Conversion Guidelines"
-  link: /projects/general-electronics/project-004-cadsoft-eagle-to-gerber-conversion-guidelines
+  - name: "Project 002: UM24 USB Meter Tutorial"
+    link: /projects/general-electronics/project-002-um24-usb-meter-tutorial
 
-- name: "Project 005: XH-M219 Multi-Function Clock Module Setup"
-  link: /projects/general-electronics/project-005-xh-m219-multi-function-clock-module-setup
+  - name: "Project 003: LED Light Control Bluetooth Module for iOS/Android Setup"
+    link: /projects/general-electronics/project-003-led-ligt-control-bluetooth-module-for-ios-android-setup
 
-- name: "Project 006: Dual USB Mobile Battery Charger Setup"
-  link: /projects/general-electronics/project-006-dual-usb-mobile-battery-charger-setup
+  - name: "Project 004: Cadsoft Eagle (.brd) to Gerber Conversion Guidelines"
+    link: /projects/general-electronics/project-004-cadsoft-eagle-to-gerber-conversion-guidelines
 
-- name: "Project 007: 2-Bit Binary Counter"
-  link: /projects/general-electronics/project-007-2-bit-binary-counter
+  - name: "Project 005: XH-M219 Multi-Function Clock Module Setup"
+    link: /projects/general-electronics/project-005-xh-m219-multi-function-clock-module-setup
 
-- name: "Project 008: XY-MUP USB DC-DC Buck Boost Power Supply Module Tutorial"
-  link: /projects/general-electronics/project-008-xy-mup-usb-dc-dc-buck-boost-power-supply-module-tutorial
+  - name: "Project 006: Dual USB Mobile Battery Charger Setup"
+    link: /projects/general-electronics/project-006-dual-usb-mobile-battery-charger-setup
 
-- name: "Project 009: Discovering OR Logic with the CD4011BE"
-  link: /projects/general-electronics/project-009-discovering-or-logic-with-the-cd4011be
+  - name: "Project 007: 2-Bit Binary Counter"
+    link: /projects/general-electronics/project-007-2-bit-binary-counter
 
-- name: "Project 010: SK-UT USB Multi-Function Meter Setup"
-  link: /projects/general-electronics/project-010-sk-ut-usb-multi-function-meter-setup
+  - name: "Project 008: XY-MUP USB DC-DC Buck Boost Power Supply Module Tutorial"
+    link: /projects/general-electronics/project-008-xy-mup-usb-dc-dc-buck-boost-power-supply-module-tutorial
+
+  - name: "Project 009: Discovering OR Logic with the CD4011BE"
+    link: /projects/general-electronics/project-009-discovering-or-logic-with-the-cd4011be
+
+  - name: "Project 010: SK-UT USB Multi-Function Meter Setup"
+    link: /projects/general-electronics/project-010-sk-ut-usb-multi-function-meter-setup
+
+  - name: "Project 011: ICL8038 Signal Generator Setup"
+    link: /projects/general-electronics/project-011-icl8038-signal-generator-setup
+
+  - name: "Project 012: Microbit Robotic WiFi Camera with Electric Control Setup"
+    link: /projects/general-electronics/project-012-microbit-robotic-wifi-camera-with-electric-control-setup

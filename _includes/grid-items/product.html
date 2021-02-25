@@ -1,9 +1,9 @@
-<div class="grid-wrapper">
-    {% for item in site.data.grid-items.product %}
-        <div class="project-panel">
-            <span class="button">
-                <a href="{{ item.link }}">{{ item.name }}</a>
-            </span>
-        </div>
+<ul class="grid-container">
+    {% for item in site.data.grid-items.product.items %}
+        <li class="grid-item">
+            <a href="{{ item.link }}">
+                <p>{{ item.name }}</p>
+            </a>
+        </li>
     {% endfor %}
-</div>
+</ul>

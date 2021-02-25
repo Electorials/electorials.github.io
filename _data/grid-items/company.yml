@@ -1,24 +1,28 @@
-# When adding more pages to this folder, make sure to add in the information
-# as how they are here.
-# Make sure to create a new page in /reviews/company/ with the name
-# being *exactly* as it is in `link`, followed by the '.html' file extension
-# If text for `name` already has a " (double-quote) character, use the ' (single-
-# quote character) to surround the whole value of 'name'.
+# When adding more pages to this file, make sure to add in the information as how they are here.
+# Make sure to create a new page in /reviews/company/ with the name being *exactly* as it is in `link`, followed by the ".html" file extension.
 
-- name: Seeed Studio Fusion
-  link: /reviews/company/seeed-studio-fusion
+# If text for `name` already has a " (double-quote) character, use the ' (single-quote character) to surround the whole value of 'name'.
+# Quotes are needed to keep the colons and possibly any other non-alphanumeric characters in `name` from being interpreted.
 
-- name: Bittele Electronics
-  link: /reviews/company/bittele-electronics
+item-count: 5
+columns-for-items: 3
+rows-for-items: 2
 
-- name: JLCPCB
-  link: /reviews/company/jlcpcb
+items:
+  - name: Seeed Studio Fusion
+    link: /reviews/company/seeed-studio-fusion
 
-- name: Win Source Electronics
-  link: /reviews/company/win-source-electronics
+  - name: Bittele Electronics
+    link: /reviews/company/bittele-electronics
 
-- name: LCSC Electronics
-  link: /reviews/company/lcsc-electronics
+  - name: JLCPCB
+    link: /reviews/company/jlcpcb
 
-- name: PCBWay
-  link: /reviews/company/pcbway
+  - name: Win Source Electronics
+    link: /reviews/company/win-source-electronics
+
+  - name: LCSC Electronics
+    link: /reviews/company/lcsc-electronics
+
+  - name: PCBWay
+    link: /reviews/company/pcbway

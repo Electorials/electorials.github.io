@@ -14,10 +14,21 @@
                 margin: 0;
             }
             /* Styling here to build upon normalize.css, and not undo normalize.css's margin declaration for h1. */
+
+            .grid-container {
+                --item-count: {{ site.data.grid-items.gen-elec.item-count }};
+            }
+
+            @media only screen and (min-width: 800px) {
+                .grid-container {
+                    --columns-for-items: {{ site.data.grid-items.gen-elec.columns-for-items }};
+                    --rows-for-items: {{ site.data.grid-items.gen-elec.rows-for-items }};
+                }
+            }
         </style>
 
         <link rel="stylesheet" href="/assets/css/normalize-8.0.1.css">
-        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/styles-grid.css">
     </head>
 
     <body>
