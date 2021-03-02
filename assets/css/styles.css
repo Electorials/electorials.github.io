@@ -70,6 +70,7 @@ nav {
 .logo img {
     max-height: 4rem;
     display: inline;
+    width: 9.8rem;
 }
 
 .logo img {
@@ -454,6 +455,7 @@ footer hr {
     .logo,
     .logo img {
         max-height: 5rem;
+        width: 12.35rem;
     }
 
     .menu-item a {
