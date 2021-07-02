@@ -208,7 +208,6 @@ main > header[class] {
     color: #fffd;
     top: 14rem;
     transform: translate(0%,-50%);
-    text-shadow: 2px 2px 5px #000;
 }
 
 .hero-text * {
@@ -217,7 +216,6 @@ main > header[class] {
 }
 
 .hero-text h2 {
-    text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
 }
 
