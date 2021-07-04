@@ -244,7 +244,7 @@ main > header[class] {
     font-family: 'Open Sans', sans-serif;
     position: relative;
     left: 200px;
-    top: 235px;
+    bottom: 235px;
 }
 
 .banner {
