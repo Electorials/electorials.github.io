@@ -6,8 +6,8 @@
 }
 
 .banner-image {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
 }
 
 /*** Grid rules ***/

@@ -286,7 +286,6 @@ main > header[class] {
 
 .banner-text h2 {
     line-height: 2.25rem;
-    text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
     font-size: 1.75rem;
     margin: 0 1.5rem;
