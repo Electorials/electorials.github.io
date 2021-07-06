@@ -277,10 +277,9 @@ main > header[class] {
     position: absolute;
     width: 100%;
     text-align: center;
-    color: #fffd;
+    color: #ffff;
     top: 14rem;
     transform: translate(0%,-50%);
-    text-shadow: 2px 2px 5px #000;
     top: 50%;
     margin: 0 auto;
 }
