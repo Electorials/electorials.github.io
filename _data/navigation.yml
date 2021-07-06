@@ -6,8 +6,8 @@
   link: /projects/raspberry-pi
   class: raspberry-pi menu-item
 
-- name: General Electronics Projects
-  link: /projects/general-electronics
+- name: General Electronic Projects
+  link: /projects/general-electronic
   class: gen-elec menu-item
 
 - name: Product Reviews
