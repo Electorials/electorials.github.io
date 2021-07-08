@@ -480,7 +480,7 @@ footer hr {
 /* For screens whose resolution width is 800px or greater */
 @media only screen and (min-width: 800px) {
     :root {
-        --nav-height: 7rem;
+        --nav-height: 5rem;
     }
 
     nav {
@@ -488,12 +488,12 @@ footer hr {
     }
 
     .logo {
-        margin: 1rem;
+        margin: 0.5rem;
     }
 
     .logo,
     .logo img {
-        max-height: 5rem;
+        max-height: 4rem;
         width: 12.35rem;
     }
 
