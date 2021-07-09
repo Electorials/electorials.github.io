@@ -435,6 +435,7 @@ section picture img {
     color: #5a5f63;
     text-decoration: none;
     font-weight: 600;
+    border-radius: 1.3rem;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -442,6 +443,15 @@ section picture img {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.links a:hover {
+  background: #5a5f63;
+  color: white;
+}
+
+.links a:focus{
+  border: .25rem solid #343638;
 }
 
 /***** Footer content rules *****/
