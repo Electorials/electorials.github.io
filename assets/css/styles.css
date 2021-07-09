@@ -111,10 +111,6 @@ nav {
 	border-bottom: 4px solid #ff6100;;
 }
 
-.menu-item a:focus {
-    border-bottom: 4px solid #f1813a;
-}
-
 /** Dropdown menu rules start **/
 .dropdown li:hover {
     background: #a2a2a2;
@@ -447,10 +443,6 @@ section picture img {
 .links a:hover {
   background: #5a5f63;
   color: white;
-}
-
-.links a:focus{
-  border: .25rem solid #343638;
 }
 
 /***** Footer content rules *****/
