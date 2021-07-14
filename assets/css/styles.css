@@ -21,9 +21,13 @@ a {
     text-decoration: none;
 }
 
+a2 {
+  text-decoration: underline;
+}
+
 main a {
     color: #4e4e4e;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 main a:focus:not(.links a) {
