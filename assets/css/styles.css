@@ -306,6 +306,24 @@ main > header[class] {
   margin: 0 auto;
 }
 
+.company-reviews-banner-image {
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+  var(--banner-image);
+  background: -o-linear-gradient(bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+  var(--banner-image);
+  background: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+  var(--banner-image);
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+
+  height: var(--banner-height);
+  margin: 0 auto;
+}
+
 .banner-text {
     position: absolute;
     width: 100%;
