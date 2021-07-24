@@ -218,6 +218,7 @@ main > header[class] {
     font-size: 40px;
     position: relative;
     bottom: 430px;
+    font-weight: bold;
 }
 
 .subtitle {
@@ -340,6 +341,7 @@ main > header[class] {
     font-family: 'Verdana', sans-serif;
     font-size: 1.75rem;
     margin: 0 1.5rem;
+    font-weight: bold;
 }
 
 .hero-image,
@@ -385,6 +387,7 @@ section h2 {
     /* margin-bottom: 1.5rem; */
     font-size: 1.8rem;
     color: black;
+    font-weight: bold;
 }
 
 section h4 {
