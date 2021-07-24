@@ -468,8 +468,7 @@ section picture img {
 /***** Footer content rules *****/
 footer {
     padding: 0 1.5rem;
-    margin: 2rem auto auto;
-    max-width: 60rem;
+    max-width: 100%;
     /* ^^^ These three rules bring the footer close to how the main content is
     laid out. */
     text-align: center;
@@ -478,26 +477,7 @@ footer {
 }
 
 footer > div {
-    margin: .5rem auto;
-}
-
-footer hr {
-    border-color: black;
-    opacity: 0.375;
-}
-
-#footer-banner {
-    font-family: 'Patua One', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-#copyright {
-    float: left;
-    font-size: 1em;
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 2rem;
+    margin: auto;
 }
 
 .page-footer {
@@ -508,7 +488,7 @@ footer hr {
 
 .footer-copyright {
     color: #666;
-    padding: 40px 0;
+    padding: 0px 0;
 }
 
 /* For screens whose resolution width is 800px or greater */
