@@ -497,6 +497,16 @@ footer hr {
     margin-bottom: 2rem;
 }
 
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 60px 0 30px;
+}
+.footer-copyright {
+    color: #666;
+    padding: 40px 0;
+}
+
 /* For screens whose resolution width is 800px or greater */
 @media only screen and (min-width: 800px) {
     :root {
