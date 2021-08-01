@@ -13,10 +13,6 @@
     font-family: 'Arial', sans-serif;
 }
 
-div {
-    margin: 2rem auto;
-}
-
 a {
     text-decoration: none;
 }
@@ -207,6 +203,7 @@ main > header[class] {
     text-align: center;
     color: #ffff;
     transform: translate(0%,-50%);
+    margin: 2rem auto;
 }
 
 .hero-text * {
