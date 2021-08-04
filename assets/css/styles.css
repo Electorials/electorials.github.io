@@ -487,12 +487,7 @@ footer > div {
     margin: auto;
 }
 
-i.far {
-  color: #bbb;
-  font-size: 20px;
-}
-
-i.fa {
+i {
   color: #bbb;
 }
 
