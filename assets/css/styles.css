@@ -494,12 +494,11 @@ i {
 .page-footer {
     background-color: #292c2f;
     color: #bbb;
-    padding: 30px 0 20px;
+    padding: 30px 0 10px;
 }
 
 .footer-copyright {
     color: #666;
-    padding: 0px 0;
     text-align: center;
 }
 
