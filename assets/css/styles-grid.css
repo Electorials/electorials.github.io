@@ -55,6 +55,7 @@
 .grid-item p {
     line-height: 1.25rem;
     padding: .5rem .75rem;
+    margin-bottom: 0rem;
 }
 
 /* For screens whose resolution width is 800px or greater */
