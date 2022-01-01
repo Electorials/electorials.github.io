@@ -389,6 +389,7 @@ section h2 {
 
 section h4 {
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 section hr {
@@ -500,6 +501,10 @@ i {
 .footer-copyright {
     color: #666;
     text-align: center;
+}
+
+p{
+  margin-bottom: 0rem !important;
 }
 
 /* For screens whose resolution width is 800px or greater */
