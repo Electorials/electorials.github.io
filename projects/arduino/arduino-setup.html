@@ -11,7 +11,7 @@ title: Arduino Setup
 </header>
 
 <section>
-    <h3>Arduino USB Connection</h3>
+    <h3>Arduino USB connection</h3>
 
     <p>The first step is to get a USB cable that is the same size as the connector port on your board. For example, the Arduino Uno needs a Type-B USB data cable whereas the Arduino Due requires a Micro-B USB cable. The Due has two USB ports (Native USB and Programming) so plug your USB cable into either one of the two ports.</p>
 
@@ -43,13 +43,13 @@ Steps are fragmented and it's best for usability to *not* have to click a link
 just to view images by putting the images or similar images in the same page
 where they are already reading the site with the Arduino set-up instructions. -->
 <section>
-    <h3>Setting up the Drivers</h3>
+    <h3>Setting up the drivers</h3>
 
     <p>The downloading of drivers is fairly easy but if the IDE does not recognise the board you are using, follow this procedure. This problem is common when using clone Arduinos with a different on-board driver chip (CH340) and when you plug in the board to your computer, it immediately disconnects. Normally, Windows Installer will download drivers automatically upon plugging the board in but if your computer does not identify the board, downloading drivers is essential. Start by plugging in your board to get started:</p>
 
     <ol>
-        <li>First, open up Control Panel.
-        <img src="/assets/img/arduino/picture-3-for-arduino-setup.png" alt="Windows Control Panel"></li>
+        <li>First, open up Control Panel.</li>
+        <img src="/assets/img/arduino/picture-3-for-arduino-setup.png" alt="Windows Control Panel">
         <li>Then click on System & Security and then on System.
         <img src="/assets/img/arduino/picture-4-for-arduino-setup.png" alt="Windows Control Panel, 'Device Manager' highlighted"></li>
         <li>Once in System, go to Device Manager and click on Ports (COM & LGT).
@@ -81,7 +81,7 @@ where they are already reading the site with the Arduino set-up instructions. --
 <hr>
 
 <section>
-    <h3>Testing the Board</h3>
+    <h3>Testing the board</h3>
 
     <p>Once you have completed the above, you will have to test the board.</p>
     <ol>
@@ -89,27 +89,39 @@ where they are already reading the site with the Arduino set-up instructions. --
         <li>Go to File > Examples > 01. Basics > Blink. By clicking Blink, a new example sketch will open.</li>
         <li>Upload the sketch to the board. After uploading, the on-board LED should turn on for a second, then turn off for a second repeatedly.
             <ul>
-                <li>If you press the reset button on the board, the LED will blink rapidly then start the process again.</li>
+                <li>If you press the reset button on the board, the LED will blink rapidly to then start the process again.</li>
             </ul>
         </li>
     </ol> By using this simple sketch, you now know that the board is programmable and functional.
 
-    <img src="/assets/img/arduino/p140.png" alt="Arduino Keyestudio Uno with top-left orange LED on">
-    <img src="/assets/img/arduino/p142.png" alt="Arduino Keyestudio Uno with top-left orange LED off">
+<div class="row">
+  <div class="column">
+    <center><img src="/assets/img/arduino/p140.png" alt="Arduino Keyestudio Uno with top-left orange LED on"></center>
+    </div>
+  <div class="column">
+    <center><img src="/assets/img/arduino/p142.png" alt="Arduino Keyestudio Uno with top-left orange LED off"></center>
+  </div>
+</div>
+</section>
 
-    <p>After overseeing the circuit, this simple code will now be explained.</p>
+ <hr>
+
+ <section>
+   <h3>Explaining the code</h3>
+
+    <p>After overseeing the circuit, the code will now be explained.</p>
 
     <p>Comments on sketches usually start with <code>//</code> or <code>/*</code> but it is not part of the code and is ignored by the IDE.</p>
     <p>The first line of code is <code>void setup</code> as Arduino skethces must have two compulsory commands; <code>void setup</code> and <code>void loop</code>. The <code>void setup</code> is the part which only runs one time before <code>void loop</code>, which runs repetitively.</p>
 
-    <p>In this particular sketch, <code>void setup</code> declares that the <code>pin 13 LED</code> is going to send data out <code>(OUTPUT)</code>, which is what makes the LED blink.</p>
+    <p>In this particular sketch, <code>void setup</code> declares that the <code>pin 13</code> LED is going to send data out <code>(OUTPUT)</code>, to control the LED.</p>
 
     <p>The second part of this code is under <code>void loop</code> since the LED blinks infinitely, making a loop. First, pin 13 is set HIGH (which turns the LED on). <code>DigitalWrite</code> is simply a function declaring what to do with the LED (turn on or turn off), which we then code to output the results we want.</p>
     <p>The next line of <code>void loop</code> is a delay command, which is similar to a pause as it stops the circuit. The length of the delay is set to a second (1000 ms). Milliseconds is the unit of time used when working with delays.</p>
 
     <p>In the next line, pin 13 is set LOW (turns off the LED).</p>
 
-    <p>Finally the code is complete. That section will repeat unless power is removed to the Arduino board.</p>
+    <p>Finally, the code is complete. The loop section will repeat until power is removed to the Arduino board.</p>
     <!-- In the original page, there is a "to edit." as the last paragraph.
     This section underneath the images was meant to be edited later on, no? -->
 </section>
