@@ -36,7 +36,7 @@
 .grid-item:nth-child(even) a {
     background: white;
     color: #5a5f63;
-    border: .5rem solid #5a5f63;
+    border: .3rem solid #5a5f63;
 }
 
 .grid-item:nth-child(even) a:hover,
@@ -49,7 +49,7 @@
     place-items: center;
     text-align: center;
     height: 100%;
-    padding: .5rem;
+    padding: .2rem;
 }
 
 .grid-item p {
