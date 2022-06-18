@@ -152,8 +152,8 @@ main {
 main > :not(.hero):not(.banner):not(.section-border) {
     margin: 1.125rem auto;
     padding: 0 2rem;
-    max-width: var(--main-content-width);
     color: #4e4e4e;
+    width: 100%;
 }
 
 main > :first-child {
