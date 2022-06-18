@@ -146,7 +146,6 @@ nav ul.dropdown li.menu-item {
 main {
     padding: var(--nav-height) 0 0;
     border-bottom: solid #ff6100 .125rem;
-    font-weight: bold;
 }
 
 /* Selects all children of <main> that *aren't* .hero, .banner, nor .section-border */
@@ -232,6 +231,7 @@ main > header[class] {
     font-style: italic;
     position: relative;
     bottom: 210px;
+    font-weight: bold;
 }
 
 .quote-text {
@@ -240,6 +240,7 @@ main > header[class] {
     position: relative;
     left: 200px;
     bottom: 235px;
+    font-weight: bold;
 }
 
 .banner {
