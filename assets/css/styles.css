@@ -153,7 +153,7 @@ main > :not(.hero):not(.banner):not(.section-border) {
     margin: 1.125rem auto;
     padding: 0 2rem;
     color: #4e4e4e;
-    width: 100%;
+    width: 75%;
 }
 
 main > :first-child {
@@ -211,18 +211,18 @@ main > header[class] {
 
 .hero-text h2 {
     font-family: 'Verdana', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     position: relative;
-    bottom: 430px;
+    bottom: 350px;
     font-weight: bold;
 }
 
 .subtitle {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     position: relative;
-    bottom: 490px;
+    bottom: 400px;
 }
 
 .hero-text blockquote {
