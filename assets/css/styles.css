@@ -92,13 +92,12 @@ nav {
     --item-width: 100%;
     display: flex;
     padding: .125rem 0rem;
-    font-size: .875em;
+    font-size: 1em;
     width: var(--item-width);
     transform: translateX(calc((100% - var(--item-width)) / 2 ));
     line-height: 1.5rem;
     text-decoration: none;
     color: black;
-    font-weight: 900;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
 1180px or somewhere wider. */
@@ -219,10 +218,9 @@ main > header[class] {
 
 .subtitle {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 25px;
+    font-size: 30px;
     position: relative;
-    bottom: 400px;
+    bottom: 415px;
 }
 
 .hero-text blockquote {
