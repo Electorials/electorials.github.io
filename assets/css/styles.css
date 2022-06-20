@@ -568,11 +568,11 @@ p {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-	.js .menu {
+	.menu {
 		display:none;
 	}
 
-	.js .slicknav_menu {
+	.slicknav_menu {
 		display:block;
 	}
 
