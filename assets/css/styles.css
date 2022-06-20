@@ -558,6 +558,27 @@ p {
     }
 }
 
+.slicknav_menu {
+	display:none;
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.js .menu {
+		display:none;
+	}
+
+	.js .slicknav_menu {
+		display:block;
+	}
+
+  
+}
+
 /*
 * { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
