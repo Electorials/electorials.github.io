@@ -573,7 +573,7 @@ p {
 	}
 
 	.slicknav_menu {
-		display:block;
+		display:inline-block;
 	}
 
   
