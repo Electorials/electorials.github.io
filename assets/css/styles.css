@@ -98,6 +98,7 @@ nav {
     line-height: 1.5rem;
     text-decoration: none;
     color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 /* Navbar overflows at 1175px. Later create media query to change styling at
 1180px or somewhere wider. */
