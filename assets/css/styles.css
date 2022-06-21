@@ -571,9 +571,32 @@ p {
 	.menu {
 		display:none;
 	}
-
 	.slicknav_menu {
 		display:inline-block;
+		padding: 0;
+	}
+	.hero-text h2 {
+		font-size: 30px;
+		line-height: 45px;
+		padding: 0 20px;
+	}
+	.subtitle {
+		font-size: 20px;
+		bottom: 310px;
+		padding: 0 20px;
+	}
+	main > :not(.hero):not(.banner):not(.section-border) {
+		margin: 0;
+		width: 100%;
+	}
+	.section-border {
+		width: 85vw;
+	}
+	.links a {
+		margin: 0;
+	}
+	.links {
+		padding: 0;
 	}
 
   
