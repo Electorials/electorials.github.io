@@ -605,7 +605,7 @@ p {
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 540px) {
+@media (min-width: 280px) and (max-width: 540px) {
 	.menu {
 		display:none;
 	}
