@@ -6,7 +6,7 @@
   link: /projects/raspberry-pi
   class: raspberry-pi menu-item
 
-- name: General Electronic Projects
+- name: Gen. Elec Projects
   link: /projects/general-electronics
   class: gen-elec menu-item
 

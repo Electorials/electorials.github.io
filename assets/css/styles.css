@@ -549,6 +549,14 @@ p {
         margin: 2em 4rem;
     }
 
+    .hero-text h2 {
+	    	line-height: 65px;
+	}
+
+  .subtitle {
+	    	bottom: 415px;
+	}
+
     .banner {
         --banner-height: 28.125rem;
     }
@@ -564,42 +572,53 @@ p {
 }
 
 
-/* 
+/*
   ##Device = Tablets, Ipads (portrait)
   ##Screen = B/w 768px to 1024px
 */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 700px) and (max-width: 799px) {
 	.hero-text h2 {
 	    	line-height: 65px;
 	}
 	.subtitle {
 	    	bottom: 300px;
 	}
-	
-  
+
+
 }
 
+@media (min-width: 541px) and (max-width: 699px){
+	.menu-item a{
+		font-size: 0.75em;
+	}
+	.hero-text h2 {
+	    	line-height: 65px;
+	}
+	.subtitle {
+	    	bottom: 300px;
+	}
+}
 
-/* 
+/*
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 540px) {
 	.menu {
 		display:none;
 	}
 	.slicknav_menu {
 		display:inline-block;
 		padding: 0;
-		margin-top: 25px;
+		margin-top: -18px;
 	}
 	.slicknav_btn {
-	     	margin: 0; 
+	     	margin: 0;
 	}
 	.slicknav_nav {
-	   	padding: 10px;
+	   	padding: 5px;
 	}
 	.hero-text h2 {
 		font-size: 30px;
@@ -625,7 +644,6 @@ p {
 		padding: 0;
 	}
 
-  
 }
 
 /*
