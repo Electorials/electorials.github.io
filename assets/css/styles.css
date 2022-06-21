@@ -574,6 +574,13 @@ p {
 	.slicknav_menu {
 		display:inline-block;
 		padding: 0;
+		margin-top: 25px;
+	}
+	.slicknav_btn {
+	     	margin: 0; 
+	}
+	.slicknav_nav {
+	   	padding: 10px;
 	}
 	.hero-text h2 {
 		font-size: 30px;
