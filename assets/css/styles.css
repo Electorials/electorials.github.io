@@ -559,6 +559,75 @@ p {
     }
 }
 
+.slicknav_menu {
+	display:none;
+}
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.hero-text h2 {
+	    	line-height: 65px;
+	}
+	.subtitle {
+	    	bottom: 300px;
+	}
+	
+  
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.menu {
+		display:none;
+	}
+	.slicknav_menu {
+		display:inline-block;
+		padding: 0;
+		margin-top: 25px;
+	}
+	.slicknav_btn {
+	     	margin: 0; 
+	}
+	.slicknav_nav {
+	   	padding: 10px;
+	}
+	.hero-text h2 {
+		font-size: 30px;
+		line-height: 45px;
+		padding: 0 20px;
+	}
+	.subtitle {
+		font-size: 20px;
+		bottom: 310px;
+		padding: 0 20px;
+	}
+	main > :not(.hero):not(.banner):not(.section-border) {
+		margin: 0;
+		width: 100%;
+	}
+	.section-border {
+		width: 85vw;
+	}
+	.links a {
+		margin: 0;
+	}
+	.links {
+		padding: 0;
+	}
+
+  
+}
+
 /*
 * { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
