@@ -612,7 +612,8 @@ p {
 	.slicknav_menu {
 		display:inline-block;
 		padding: 0;
-		margin-top: -18px;
+		margin-top: 25px;
+    margin-right: -18px;
 	}
 	.slicknav_btn {
 	     	margin: 0;
